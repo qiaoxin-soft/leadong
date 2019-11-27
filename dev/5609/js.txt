@@ -1,0 +1,46 @@
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "fly_sky";
+        var fly_sky = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                  );
+        $.extend(fly_sky, {
+            "init": innit
+        }
+                )
+        function innit(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+          
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+               var $lis= $selector.find($(".zh_module_container  .zh_xfbk .zh ul li"));                             
+                  $lis.each(function(index){
+                      var $nub = $(this).find(".nub");
+						$nub.append('<span>0'+(index+1)+'<span/>');
+                  });  
+   
+            var $slick = $selector.find(".zh_module_container .zh_xfbk .zh ul").slick({
+                lazyLoad: 'ondemand',
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                responsive: [
+                    {
+                        breakpoint: 501,
+                        settings: {
+                            slidesToShow: $lis,
+                            vertical:true,
+                            verticalSwiping:true,
+                            touchThreshold:10,
+                            infinite:false,
+                        }
+                    }
+                ]
+            }
+                                                                                     );
+        }
+    }
+    )(window, jQuery);</script>

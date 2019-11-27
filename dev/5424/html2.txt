@@ -1,0 +1,247 @@
+[#assign color0 = '#059FE7']
+[#assign color1 = '#E9BD4B']
+
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+[/#if]
+
+[#if componentBlock.blockStyleClass??]
+	[#if componentBlock.blockStyleClass.colorVal1?? ]
+        [#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+    [/#if]
+[/#if]
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .sq_nav_1 .navigation ul li a:hover{color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_2 .sq_nav_1 .navigation>ul>li>a:before{background-color:${color0!}}
+</style>
+[/@web_frontend]
+[@web_frontend]
+<style>
+	
+#siteblocks-setting-wrap-${componentBlock.settingId!} .slick-next:hover{background-color:${color1!}}    
+ #siteblocks-setting-wrap-${componentBlock.settingId!} .slick-dots .slick-active>button{background-color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .slick-dots .slick-active>button{border-color:${color1!}}
+</style>
+[/@web_frontend]
+[@web_backend]<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"></i> [/@web_backend]
+<div class="DM_nav_banner">
+    <div class="sq_header_1 sq_header_2"> <i
+        data-blocksetting-color="{'color':'colorVal-1-${color1!}'}" style="display:none;"></i>
+        <div class="sq_header_1Hover">[@phoenix_layout_node nodeId='-1' appId='OGKApUfKYrMg' ajaxFlag='0' ajaxOptions=''
+            appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+        <div class="sq_icon_1">
+            <div class="backstage-blocksEditor-wrap sq_icon_img" data-wrap-type="1" data-storage="0"
+                data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=5790d856-dccf-430a-b3bf-d0ad360f527f><div data-suggest_width="200" data-suggest_height="66" class="backstage-componet">
+                    <div class="backstage-componet-bd">
+                        <a class="blocks-image" href="">
+                            <img src="http://a0.leadongcdn.cn/cloud/lnBqnKlmRlqSpmqiijnp/logo.jpg" alt="" title="">
+                        </a>
+                    </div>
+                </div></div>
+        </div>
+        <div class="sq_nav_1">
+            <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MRAUpfKKpsgB"
+                data-storage="1" data-blocksEditor-type="phoenix_blocks_navigation" data-auto_uuid=bc7d8900-d99b-487a-b848-60a05135e6ce>[@json json="${navigatePicMap!}"]
+                <ul class="blockNavBar fix">
+                    [#assign currentNavName="" ]
+                    [@group groupType="2" groupLevel="3" ]
+                    [#list groupList as nav]
+                    [@encypt id="${nav.navId}" method="decode"]
+                    [#assign topnavId = "navId_${resultId}"]
+                    [/@encypt]
+                    <li id="parent_${nav_index}">
+                        [#assign currentIndex='']
+                        [#if nav.currentFlag??]
+                        [#assign currentIndex=nav_index]
+                        [#assign currentNavName=nav.navName!?html]
+                        [/#if]
+                        [#assign visible = true]
+                        [#assign icon = ""]
+                        [#if jsonMap?? && jsonMap[topnavId]??]
+                        [#if jsonMap[topnavId].isOpenNew?? && jsonMap[topnavId].isOpenNew == 'true']
+                        [#assign target="_blank"]
+                        [#else]
+                        [#assign target="_self"]
+                        [/#if]
+                        [#if jsonMap[topnavId].isVisible?? && jsonMap[topnavId].isVisible == 'false']
+                        [#assign visible = false]
+                        [#else]
+                        [#assign visible = true]
+                        [/#if]
+                        [#if jsonMap[topnavId].isNofollow?? && jsonMap[topnavId].isNofollow == 'true']
+                        [#assign rel="nofollow"]
+                        [#else]
+                        [#assign rel=""]
+                        [/#if]
+                        [#if jsonMap[topnavId].picName??]
+                        [#assign picName = '${jsonMap[topnavId].picName!""}']
+                        [/#if]
+                        [#if jsonMap[topnavId].picId??]
+                        [#assign picId = '${jsonMap[topnavId].picId!""}']
+                        [/#if]
+                        [#if jsonMap[topnavId].icohtml??]
+                        [#assign icon = jsonMap[topnavId].icohtml]
+                        [/#if]
+                        [/#if]
+                        <a id="${nav.navId}" target="${target!}" href="${nav.navUrl!}"
+                            data-currentIndex="${currentIndex!''}" [#if subNav?? && subNav.navType??
+                            && "4"==subNav.navType]anchor-link="true" [/#if]>
+                            ${nav.navName!?html}
+                        </a>
+                        [#if nav.hasSub?? == true]
+                        <i class="fa fa-angle-down icon ${icon!'fa fa-angle-down'}">
+                        </i>
+                        [/#if]
+                        [#if nav.hasSub?? == true]
+                        <div class="sub">
+                            <ul class="subUl">
+                                [#list nav.subGroups as subNav]
+                                [@encypt id="${subNav.navId}" method="decode"]
+                                [#assign subnavId = "navId_${resultId}"]
+                                [/@encypt]
+                                [#assign visible = true]
+                                [#if jsonMap?? && jsonMap[subnavId]??]
+                                [#if jsonMap[subnavId].isOpenNew == 'true']
+                                [#assign target="_blank"]
+                                [#else]
+                                [#assign target="_self"]
+                                [/#if]
+                                [#if jsonMap[subnavId].isVisible?? && jsonMap[subnavId].isVisible == 'false']
+                                [#assign visible = false]
+                                [#else]
+                                [#assign visible = true]
+                                [/#if]
+                                [#if jsonMap[subnavId].isNofollow?? && jsonMap[subnavId].isNofollow == 'true']
+                                [#assign rel="nofollow"]
+                                [#else]
+                                [#assign rel=""]
+                                [/#if]
+                                [/#if]
+                                <li>
+                                    [#assign currentIndex='']
+                                    [#if subNav.currentFlag??]
+                                    [#assign currentIndex=nav_index]
+                                    [#assign currentNavName=subNav.navName!?html]
+                                    [/#if]
+                                    <a target="${target!}" rel="${rel!}" href="${subNav.navUrl!}">
+                                        ${subNav.navName!?html}
+                                    </a>
+                                    [#if subNav.hasSub?? == true]
+                                    <i
+                                        class="icon [#if jsonMap?? && jsonMap[subnavId]?? && jsonMap[subnavId].icohtml??] ${jsonMap[subnavId].icohtml!''} [#else]fa fa-angle-down[/#if]">
+                                    </i>
+                                    [/#if]
+                                    [#if jsonMap?? && jsonMap[subnavId]?? && jsonMap[subnavId].picId?? &&
+                                    jsonMap[subnavId].picId!='']
+                                    <img src="[@ffsUrl pname=" ${jsonMap[subnavId].picName}"
+                                        pid="${jsonMap[subnavId].picId}" width="400" height="160" /]"
+                                        alt="${jsonMap[subnavId].picName!}">
+                                    [/#if]
+                                    [#if subNav.hasSub?? == true]
+                                    <ul class="sub-nav">
+                                        [#list subNav.subGroups as subSubNav]
+                                        [@encypt id="${subSubNav.navId}" method="decode"]
+                                        [#assign subsubnavId = "navId_${resultId}"]
+                                        [/@encypt]
+                                        [#assign visible = true]
+                                        [#if jsonMap?? && jsonMap[subsubnavId]??]
+                                        [#if jsonMap[subsubnavId].isOpenNew == 'true']
+                                        [#assign target="_blank"]
+                                        [#else]
+                                        [#assign target="_self"]
+                                        [/#if]
+                                        [#if jsonMap[subsubnavId].isVisible?? && jsonMap[subsubnavId].isVisible ==
+                                        'false']
+                                        [#assign visible = false]
+                                        [#else]
+                                        [#assign visible = true]
+                                        [/#if]
+                                        [#if jsonMap[subsubnavId].isNofollow?? && jsonMap[subsubnavId].isNofollow ==
+                                        'true']
+                                        [#assign rel="nofollow"]
+                                        [#else]
+                                        [#assign rel=""]
+                                        [/#if]
+                                        [#--
+                                        [@ffsUrl pname="${jsonMap[subsubnavId].picName}"
+                                        pid="${jsonMap[subsubnavId].picId}" width="" height="" /]
+                                        --]
+                                        [/#if]
+                                        <li class="[#if !visible]hide[/#if]"
+                                            data-visible="[#if visible]1[#else]0[/#if]">
+                                            [#assign currentIndex='']
+                                            [#if subSubNav.currentFlag??]
+                                            [#assign currentNavName=subSubNav.navName!?html]
+                                            [#assign currentIndex=nav_index]
+                                            [/#if]
+                                            <a id="nav_${subSubNav.navId}" class="sitewidget-sub-nav"
+                                                target="${target!}" rel="${rel!}" data-currentIndex='${currentIndex!''}'
+                                                href="${subSubNav.navUrl!}">
+                                                ${subSubNav.navName!?html}
+                                            </a>
+                                        </li>
+                                        [/#list]
+                                    </ul>
+                                    [/#if]
+                                </li>
+                                [/#list]
+                            </ul>
+                        </div>
+                        [/#if]
+                    </li>
+                    [/#list]
+                    [/@group]
+                </ul>
+                [/@json]</div>
+        </div>
+        <div class="sq_right_1">
+            <div class="sq_search_1">
+                <div class="backstage-blocksEditor-wrap serach" data-wrap-type="1" data-relate-appId="PEfApUKpfjQL" data-storage="1" data-blocksEditor-type="phoenix_blocks_serach"  [@s.m "QLfUKAppPjMO_search" /] data-auto_uuid=262bdb67-157d-451b-935a-40a56fdf948e><form action="/phoenix/admin/prod/search" method="get" novalidate>
+                        <div class="search-wrap">
+                            <div class="search-input">
+                                <input type="text" class="hide" name="searchValue" id="inputSearch" placeholder="${obligateKeyword!'ËÑË÷'}" autocomplete="off" />
+                                <img src="http://a4.leadongcdn.cn/cloud/irBqjKlqRinSpjoirjjo/sousuo.png" alt="" title="">
+                                <div class="line"></div>
+                                <button type="submit" class="hide">
+                                    <img src="//a0.leadongcdn.cn/cloud/ipBqnKlmRlkSnriojlno/search.png" alt="" title="">
+                                </button>
+                            </div>
+                        </div>
+                    </form></div>
+            </div>
+            
+            <div class="sq_nav_menu">
+                <img class="fa-bars" src="//a0.leadongcdn.cn/cloud/ioBqjKlqRinSpjoiqijo/san.png" alt="" title=""
+                    width="22" height="22" style="cursor:pointer;">
+                <img class="fa-close" src="//a3.leadongcdn.cn/cloud/ipBqjKlqRinSpjoimijo/xxx.png" alt="" title=""
+                    width="18" height="18" style="cursor:pointer;">
+            </div>
+        </div>
+    </div>
+    <div class="DM_banner">
+        <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg"
+            data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=d9e375bc-2bff-467c-bffe-1546f7e60574><div class="siteblocks-header-banner">
+                <ul> [@gallery photos="${photo_ids!}" showAllFlag=true] [#if gallery_data?? ||
+                    (gallery_data?size)>0] [#list gallery_data as photo] <li> [#if photo.linkJson?? &&
+                        photo.linkJson!='']<a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>[/#if]
+                            <picture>
+                            <source media="(min-width: 450px)"
+                                srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                            <source media="(max-width: 449px)"
+                                srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                            <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]"
+                                alt="${photo.trans_photoAlt!?html}" /> </picture> [#if photo.linkJson?? &&
+                            photo.linkJson!='']</a>[/#if] <div class="banner-description">
+                            <div class="container"> [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']<div
+                                    class="banner-name">${photo.trans_photoAlt!?html}</div>[/#if] [#if
+                                photo.trans_descJson?? && photo.trans_descJson!='']<div class="banner-docs">
+                                    ${photo.trans_descJson!}</div>[/#if] [#if photo.linkJson?? &&
+                                photo.linkJson!='']<a class="moreBtn" [@phoenix_linkUrl linkJson="${photo.linkJson}"
+                                    ][/@phoenix_linkUrl]>Learn More</a>[/#if] </div> </div> </li> [/#list] [#elseif
+                                    (gallery_data?size)==0] no data. [/#if] [/@gallery] </ul> [@web_javascript
+                                    collect="true" pm_script="${settingId!}" jumpTo="${settingId!}" ] $(function(){
+                                    window._block_namespaces_['sq2HeaderOne'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+                                    }); [/@web_javascript] </div></div> </div> </div>

@@ -1,0 +1,66 @@
+[#assign color0 = '#FFD968']
+[#assign color1 = '#F7F7F7']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]   
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .bi_wrapper_1028 .bi_package_1028 .bi_img_1028:hover{ border-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .bi_wrapper_1028 .bi_ulStyle_1028 .slick-arrow{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .bi_wrapper_1028 .bi_package_1028  .bi_text_1028{ background-color:${color1!}}
+[/@web_style]
+[@web_backend]<i data-blocksetting-color="{'border-color':'colorVal-0-${color0!}'}"></i> [/@web_backend]
+<div class="bi_wrapper_1028 ">
+    <div class="backstage-blocksEditor-wrap bi_textStyle_1028" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=f38d3fcc-7ad2-48ed-9067-96d5e1d6d5b6>OUR TEAM</div>
+    <div class="backstage-blocksEditor-wrap navigation " data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=21cd7936-e61c-4c6b-9ed0-c2c4bfc3849c><div class="siteblocks-header-banner">
+            
+        <ul class="bi_ulStyle_1028 clearfix">
+                [@gallery photos="${photo_ids!}" showAllFlag=true]				[#if gallery_data?? || (gallery_data?size)>0]					[#list gallery_data as photo]						
+                <li class="bi_package_1028 active">
+                    <div class="bi_empty_1028">
+                    </div>
+                    [#if photo.linkJson?? && photo.linkJson!='']
+                    <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                        [/#if]	
+                        <picture >
+                            <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                            <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                            <img class="bi_img_1028" src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}"  />
+                        </picture>
+                        [#if photo.linkJson?? && photo.linkJson!='']
+                    </a>
+                    [/#if]	                        	             			
+                    <div class="banner-description bi_text_1028"[@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                        <div class="container bi_tet_1028">
+                            [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                            <div class="banner-name bi_text01_1028">
+                                ${photo.trans_photoAlt!?html}
+                            </div>
+                            [/#if]	                                [#if photo.trans_descJson?? && photo.trans_descJson!='']
+                            <div class="banner-docs bi_text02_1028">
+                                ${photo.trans_descJson!}
+                            </div>
+                            [/#if]	             					[#if photo.linkJson?? && photo.linkJson!='']
+                            <a class="moreBtn" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                Learn More
+                            </a>
+                            [/#if]	                            
+                        </div>
+                    </div>
+                </li>
+                [/#list]				[#elseif (gallery_data?size)==0]	            	no data.				[/#if]			[/@gallery]		
+            </ul>
+        
+ [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+        $(function(){
+        window._block_namespaces_['qukuai5869'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+        });
+[/@web_javascript]
+        </div></div>
+      
+    
+</div>

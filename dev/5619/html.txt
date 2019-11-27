@@ -1,0 +1,105 @@
+[#assign color0 = '#E9BD4B']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[/#if]
+[@web_frontend]
+<style>
+    #siteblocks-setting-wrap-${
+        componentBlock.settingId!}
+    .container  .moreBtn:hover{
+        background-color:${
+                color0!}
+    }
+    #siteblocks-setting-wrap-${
+        componentBlock.settingId!}
+    .container  .moreBtn:hover::before{
+        background-color:${
+                color0!}
+    }
+    #siteblocks-setting-wrap-${
+        componentBlock.settingId!}
+    .slick-prev:hover{
+        background-color:${
+                color0!}
+    }
+    #siteblocks-setting-wrap-${
+        componentBlock.settingId!}
+    .slick-next:hover{
+        background-color:${
+                color0!}
+    }
+    #siteblocks-setting-wrap-${
+        componentBlock.settingId!}
+    .banner-name:hover{
+        color:${
+                color0!}
+    }
+</style>
+[/@web_frontend]
+[@web_backend]
+<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}">
+</i>
+[/@web_backend]
+[@web_backend]
+<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}">
+</i>
+[/@web_backend]
+[@web_backend]
+<i data-blocksetting-color="{'color':'colorVal-0-${color0!}'}">
+</i>
+[/@web_backend]
+<div class=" yhsl_1112 ">
+    <div class="backstage-blocksEditor-wrap title" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=75c0f743-7744-4739-a2ff-ab2726b75df1>Our Projects</div>
+    <div class="picture-tile">
+        <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=e81d919c-414f-48a3-a97d-2197e5b65601><div class="siteblocks-header-banner">
+                <ul >
+                    [@gallery photos="${photo_ids!}" showAllFlag=true]
+                    [#if gallery_data?? || (gallery_data?size)>0]
+                    [#list gallery_data as photo]
+                    <li>
+                        [#if photo.linkJson?? && photo.linkJson!='']
+                        <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                            [/#if]
+                            <picture class="imgcontainer">
+                                <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                                <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                                <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                            </picture>
+                            [#if photo.linkJson?? && photo.linkJson!='']
+                        </a>
+                        [/#if]
+                        <div class="banner-description">
+                            <div class="container">
+                                [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                                <div class="banner-name">
+                                    ${photo.trans_photoAlt!?html}
+                                </div>
+                                [/#if]
+                                [#if photo.trans_descJson?? && photo.trans_descJson!='']
+                                <div class="banner-docs">
+                                    ${photo.trans_descJson!}
+                                </div>
+                                [/#if]
+                                [#if photo.linkJson?? && photo.linkJson!='']
+                                <a class="moreBtn anniu" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                    Read More
+                                </a>
+                                [/#if]
+                            </div>
+                        </div>
+                    </li>
+                    [/#list]
+                    [#elseif (gallery_data?size)==0]
+                    no data.
+                    [/#if]
+                    [/@gallery]
+                </ul>
+                [@web_javascript collect="true" pm_script="${settingId!}"
+                jumpTo="${settingId!}" ] $(function(){
+                window._block_namespaces_['qukuai5404'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+                }); [/@web_javascript]
+            </div></div>
+    </div>
+</div>

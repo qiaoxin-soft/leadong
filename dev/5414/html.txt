@@ -1,0 +1,169 @@
+[#assign color0 = '#c61717']
+[#assign color1 = '#B1B1B1']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col .one_Row_icon1 .button1{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col  .one_Row_icon1 .grey-button1{ background-color:${color1!}}
+    #siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col .two_Row_icon2 .button2{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col  .two_Row_icon2 .grey-button2{ background-color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col .three_Row_icon3 .button3{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col  .three_Row_icon3 .grey-button3{ background-color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col .four_Row_icon4 .button4{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .one_Row_four_Col  .four_Row_icon4 .grey-button4{ background-color:${color1!}}
+
+
+</style>
+[/@web_frontend]
+
+<div id="cl-5414" class="${componentBlock.containerOpenState!''}" data-container-openstate="true">
+	<div id="location_${settingId!}">
+
+
+<div class="one_Row_four_Col clearfix">
+
+        <div class="one_Row">
+         
+<div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image"><div class="backstage-componet">
+        <div class="backstage-componet-bd">
+            <a class="blocks-image" href=""><img src="//a0.leadongcdn.cn/cloud/lnBqjKlqRiqSpmiqnmjp/1.jpg" alt="" title=""></a>
+        </div>
+    </div></div>
+            
+            <div class="one_Row_icon1">
+                <div class="backstage-blocksEditor-wrap icon1" data-wrap-type="1" data-relate-appId="VyUfpAKffFmg"
+                    data-storage="1" data-blocksEditor-type="phoenix_blocks_fontIcon"><div class="sitewidget-common-fontIcon"> [#if linkAddress?? && linkAddress != '']<a
+                            [@phoenix_linkUrl linkJson="${linkAddress!}" ] [/@phoenix_linkUrl]> [/#if] <span> [#if
+                            iconClass??] [#if
+                            iconClass?index_of("block-icon")!=-1] <i class="block-icon ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [#else] <i
+                                class="fa ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [/#if]
+                            [#else]
+                            <i class="fa fa-envelope-o"></i> [/#if] </span> [#if linkAddress?? && linkAddress !=
+                            '']</a>[/#if] </div></div>
+                <div class="backstage-blocksEditor-wrap text1" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text">Mercedes-Benz</div>
+                
+                <div class="grey1">
+                <div class="grey-button1" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>[@phoenix_layout_node nodeId='-1' appId='OUAfKpUUuELZ' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+                <div class="button1"   [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_button"><div class="backstage-componet" data-suggest_width="480" data-suggest_height="480">
+                        <div class="backstage-componet-bd"> <a class="blocks-button" href="">READ MORE</a> </div>
+                    </div></div></div>
+                    
+            </div>
+             </div>
+        </div>
+    
+ 
+        <div class="two_Row">
+           <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image"><div class="backstage-componet">
+        <div class="backstage-componet-bd">
+            <a class="blocks-image" href=""><img src="//a0.leadongcdn.cn/cloud/loBqjKlqRiqSpmiqomjp/2.jpg" alt="" title=""></a>
+        </div>
+    </div></div>
+            <div class="two_Row_icon2">
+                <div class="backstage-blocksEditor-wrap icon2" data-wrap-type="1" data-relate-appId="VyUfpAKffFmg"
+                    data-storage="1" data-blocksEditor-type="phoenix_blocks_fontIcon"><div class="sitewidget-common-fontIcon"> [#if linkAddress?? && linkAddress != '']<a
+                            [@phoenix_linkUrl linkJson="${linkAddress!}" ] [/@phoenix_linkUrl]> [/#if] <span> [#if
+                            iconClass??] [#if
+                            iconClass?index_of("block-icon")!=-1] <i class="block-icon ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [#else] <i
+                                class="fa ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [/#if]
+                            [#else]
+                            <i class="fa fa-envelope-o"></i> [/#if] </span> [#if linkAddress?? && linkAddress !=
+                            '']</a>[/#if] </div></div>
+                <div class="backstage-blocksEditor-wrap text2" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text"><span>BMW</span></div>
+               <div class="grey2">
+                <div class="grey-button2" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>[@phoenix_layout_node nodeId='-1' appId='OUAfKpUUuELZ' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+                <div class="button2"   [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_button"><div class="backstage-componet" data-suggest_width="480" data-suggest_height="480">
+                        <div class="backstage-componet-bd"> <a class="blocks-button" href="">READ MORE</a> </div>
+                    </div></div></div>
+            </div>
+             </div>
+        </div>
+
+        
+        <div class="three_Row">
+      <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image"><div class="backstage-componet">
+        <div class="backstage-componet-bd">
+            <a class="blocks-image" href=""><img src="//a0.leadongcdn.cn/cloud/lpBqjKlqRiqSpmiqpmjp/3.jpg" alt="" title=""></a>
+        </div>
+    </div></div>
+            <div class="three_Row_icon3">
+                <div class="backstage-blocksEditor-wrap icon3" data-wrap-type="1" data-relate-appId="VyUfpAKffFmg"
+                    data-storage="1" data-blocksEditor-type="phoenix_blocks_fontIcon"><div class="sitewidget-common-fontIcon"> [#if linkAddress?? && linkAddress != '']<a
+                            [@phoenix_linkUrl linkJson="${linkAddress!}" ] [/@phoenix_linkUrl]> [/#if] <span> [#if
+                            iconClass??] [#if
+                            iconClass?index_of("block-icon")!=-1] <i class="block-icon ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [#else] <i
+                                class="fa ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [/#if]
+                            [#else]
+                            <i class="fa fa-envelope-o"></i> [/#if] </span> [#if linkAddress?? && linkAddress !=
+                            '']</a>[/#if] </div></div>
+                <div class="backstage-blocksEditor-wrap text3" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text">AUDI</div>
+                 <div class="grey3">
+                <div class="grey-button3" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>[@phoenix_layout_node nodeId='-1' appId='OUAfKpUUuELZ' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+                <div class="button3"   [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_button"><div class="backstage-componet" data-suggest_width="480" data-suggest_height="480">
+                        <div class="backstage-componet-bd"> <a class="blocks-button" href="">READ MORE</a> </div>
+                    </div></div></div>
+            </div>
+                </div>
+        </div>
+             
+
+           
+        <div class="four_Row">
+        <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image"><div class="backstage-componet">
+        <div class="backstage-componet-bd">
+            <a class="blocks-image" href=""><img src="//a0.leadongcdn.cn/cloud/lkBqjKlqRiqSpmjqirjq/4.jpg" alt="" title=""></a>
+        </div>
+    </div></div>
+            <div class="four_Row_icon4">
+                <div class="backstage-blocksEditor-wrap icon4" data-wrap-type="1" data-relate-appId="VyUfpAKffFmg"
+                    data-storage="1" data-blocksEditor-type="phoenix_blocks_fontIcon"><div class="sitewidget-common-fontIcon"> [#if linkAddress?? && linkAddress != '']<a
+                            [@phoenix_linkUrl linkJson="${linkAddress!}" ] [/@phoenix_linkUrl]> [/#if] <span> [#if
+                            iconClass??] [#if
+                            iconClass?index_of("block-icon")!=-1] <i class="block-icon ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [#else] <i
+                                class="fa ${iconClass!?html}"
+                                style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;"></i> [/#if]
+                            [#else]
+                            <i class="fa fa-envelope-o"></i> [/#if] </span> [#if linkAddress?? && linkAddress !=
+                            '']</a>[/#if] </div></div>
+                <div class="backstage-blocksEditor-wrap text4" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text">Subaru</div>
+                <div class="grey4"> 
+                <div class="grey-button4" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>[@phoenix_layout_node nodeId='-1' appId='OUAfKpUUuELZ' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+                <div class="button4"   [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_button"><div class="backstage-componet">
+                        <div class="backstage-componet-bd"> <a class="blocks-button" href="" >READ MORE</a> </div>
+                    </div></div></div>
+            </div>
+                </div>
+        </div>
+                   </div></div></div>
+[@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+$(function(){
+window._block_namespaces_['sqq2HeaderOne'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+});
+[/@web_javascript]

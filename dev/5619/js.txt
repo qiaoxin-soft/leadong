@@ -1,0 +1,61 @@
+<script>(function (window, $, undefined) {
+    var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {});
+    var name = "qukuai5404";
+    var qukuai5404 = _block_namespaces_[name] || (_block_namespaces_[name] = {});
+    $.extend(qukuai5404, {
+        "init": innit
+    })
+
+    function innit(nodeObj) {
+        if (!!!nodeObj) {
+            return;
+        }
+        var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+        $(".yhsl_1112  .draggable").css('height','100%');
+        $(".yhsl_1112  .slick-track").css('height','100%');
+         $(".banner-docs").each(function() {
+           var maxwidth = 125;
+           if ($(this).text().length > maxwidth) {
+               $(this).text($(this).text().substring(0, maxwidth));
+               $(this).html($(this).html() + '...');
+           }
+       });
+        
+                    var $slick= $selector.find(" .picture-tile ul").slick({
+                lazyLoad: 'ondemand',
+                slidesToShow: 4,
+                slidesToScroll: 1,
+              	adaptiveHeight: true,
+                      
+            		responsive: [
+            		   {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 4,
+                        infinite: true,
+                                          adaptiveHeight: true,
+                     				 }
+                      },{
+                      breakpoint: 769,
+                      settings: {
+                        slidesToShow: 3
+                      				}
+                    	},{
+                      breakpoint: 680,
+                      settings: {
+                        slidesToShow: 2
+                      				}
+                    	},{
+                      breakpoint: 435,
+                      settings: {
+                           slidesToShow: $(".yhsl_1112 li").length,
+                     touchThreshold:10,
+                     vertical:true,
+                     verticalSwiping:true,
+                      				}
+                    	}
+            		]
+
+              });
+    }
+    })(window, jQuery);</script>

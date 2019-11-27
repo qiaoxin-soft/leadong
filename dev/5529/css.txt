@@ -1,0 +1,609 @@
+<style>.five_pictures{
+        max-width:1180px;
+margin: 40px auto;
+            height: 501px;
+    }
+
+    .five_pictures .title{
+        text-align:center;
+        font-size:28px;
+        color:#C61717;
+        font-weight:bold;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .five_pictures .one_row{
+        width:280px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .two_row{
+        width:580px;
+        float:left;
+        position:relative;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .five_pictures .three_row{
+        width:280px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .two_row{
+        min-height: 220px;
+            }
+    .five_pictures .three_row .three_row_box1{
+        padding-bottom:20px;
+        height: 200px;
+    }
+    .five_pictures .one_row .one_row_box1 .one_picture{
+        position: relative;
+        padding-bottom:20px;
+        height: 200px;
+    }
+    .five_pictures .one_row .one_row_box1 .one_picture img {
+        height:200px;
+       width:100%;
+        display:block;
+                    }
+
+    .five_pictures .one_row .one_row_box2 .two_picture{
+        position: relative;
+    }
+    
+    .five_pictures .one_row .one_row_box2 .two_picture img {
+            height:200px;
+       width:100%;
+        display:block;
+                    }
+    .five_pictures .two_row .two_row_box1 .three_picture{
+        position: relative;
+    }
+    
+    .five_pictures .two_row .two_row_box1 .three_picture .blocks-image  img {
+        height:420px;
+       width:580px;
+        display:block;
+                    }
+    .five_pictures .three_row .four_picture{
+        padding-bottom: 20px;
+        height: 200px;
+    }
+    
+    .five_pictures .three_row .four_picture img {
+                height:200px;
+       width:100%;
+        display:block;
+                }
+    
+        .five_pictures .three_row .five_picture img {
+                height:200px;
+       width:100%;
+        display:block;
+                }
+    .five_pictures .one_row .one_row_box1  .button1 .right-button1  .blocks-button{
+        color: #fff;
+        text-decoration:none;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+        position: absolute !important;
+        top: 18%;
+        font-size: 20px;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        letter-spacing: 0;
+        width: 245px;
+        white-space: nowrap;
+        text-align: center;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .five_pictures .button1{
+        position:absolute;
+        top:30%;
+        left:50%;
+        z-index:2;
+        transform: translate(-50%,-50%);
+    }
+    .five_pictures .right-button1{
+        background: #c61717;
+        transform: skewX(-30deg);
+        width:120px;
+        height: 25px;
+        letter-spacing: 0;
+            text-align: center;
+        line-height: 25px;
+    }
+    .five_pictures  .right-button1 .backstage-blocksEditor-wrap {
+        transform: skewX(30deg);
+    }
+    .five_pictures .grey-button1{
+        width: 8px;
+        height: 25px;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -13px;
+        transform: skewX(-30deg);
+    }
+    .five_pictures .one_row .one_row_box2 .text2{
+        position: absolute !important;
+        top: 70%;
+        font-size: 20px;
+        left: 49%;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        color: #fff;
+        letter-spacing: 0;
+        width: 245px;
+        white-space: nowrap;
+        text-align: center;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .five_pictures .one_row .one_row_box2  .button2 .right-button2  .blocks-button{
+        color: #fff;
+    }
+    .five_pictures .one_row .one_row_box2  .button2{
+        position:absolute;
+        top:82%;
+        left:50%;
+        z-index:2;
+        transform: translate(-50%,-50%);
+    }
+    .five_pictures .right-button2{
+        background: #c61717;
+        transform: skewX(-30deg);
+        width: 120px;
+        height: 25px;
+        letter-spacing: 0;
+        transform: skewX(-30deg);
+            text-align: center;
+        line-height: 25px;
+    }
+    .five_pictures .grey-button2{
+        width: 8px;
+        height: 25px;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -13px;
+        transform: skewX(-30deg);
+    }
+    .five_pictures  .right-button2 .backstage-blocksEditor-wrap {
+        transform: skewX(30deg);
+    }
+    .five_pictures .two_row .two_row_box1 .text1{
+        top: 44%;
+        left: 50%;
+        font-size: 20px;
+        color: #fff;
+        position: absolute !important;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        letter-spacing: 0;
+        width: 245px;
+        white-space: nowrap;
+        text-align: center;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .five_pictures .button3{
+        position:absolute;
+        top:56%;
+        left:50%;
+        z-index:2;
+        transform: translate(-50%,-50%);
+    }
+    .five_pictures .right-button3{
+        background: #c61717;
+        transform: skewX(-30deg);
+        width: 120px;
+        height: 25px;
+        letter-spacing: 0;
+            text-align: center;
+        line-height: 25px;
+    }
+    .five_pictures .two_row .two_row_box1  .button3 .right-button3  .blocks-button{
+        color: #fff;
+    }
+    .five_pictures .grey-button3{
+        width: 8px;
+        height: 25px;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -13px;
+        transform: skewX(-30deg);
+    }
+    .five_pictures  .right-button3 .backstage-blocksEditor-wrap {
+        transform: skewX(30deg);
+    }
+    .five_pictures .three_row .three_row_box1 .text1{
+        top:18%;
+        left: 50%;
+        font-size: 20px;
+        color: #fff;
+        position: absolute !important;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        letter-spacing: 0;
+        width: 245px;
+        white-space: nowrap;
+        text-align: center;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .five_pictures .button4{
+        position:absolute;
+        top: 30%;
+        left: 53%;
+        z-index:2;
+        transform: translate(-50%,-50%);
+    }
+    .five_pictures .right-button4{
+        background: #c61717;
+        transform: skewX(-30deg);
+        width: 120px;
+        height: 25px;
+        letter-spacing: 0;
+            text-align: center;
+        line-height: 25px;
+    }
+    .five_pictures .grey-button4{
+        width: 8px;
+        height: 25px;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -13px;
+        transform: skewX(-30deg);
+    }
+    .five_pictures .three_row .three_row_box1  .button4 .right-button4  .blocks-button{
+        color: #fff;
+    }
+    .five_pictures  .right-button4 .backstage-blocksEditor-wrap {
+        transform: skewX(30deg);
+    }
+    .five_pictures .three_row .three_row_box2 .text2{
+        top: 70%;
+        left: 50%;
+        font-size: 20px;
+        color: #fff;
+        position: absolute !important;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+        letter-spacing: 0;
+        width: 245px;
+        white-space: nowrap;
+        text-align: center;
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .five_pictures .button5{
+        position:absolute;
+        top: 82%;
+        left: 50%;
+        z-index:2;
+        transform: translate(-50%,-50%);
+    }
+    .five_pictures .right-button5{
+        background: #c61717;
+        transform: skewX(-30deg);
+        width: 120px;
+        height: 25px;
+        letter-spacing: 0;
+            text-align: center;
+        line-height: 25px;
+    }
+    .five_pictures .grey-button5{
+        width: 8px;
+        height: 25px;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -13px;
+        transform: skewX(-30deg);
+    }
+    .five_pictures .three_row .three_row_box2  .button5 .right-button5  .blocks-button{
+        color: #fff;
+    }
+    .five_pictures  .right-button5 .backstage-blocksEditor-wrap {
+        transform: skewX(30deg);
+    }
+    
+    
+    @media screen and (max-width:1180px) and (min-width:500px){
+        .five_pictures .one_row .one_row_box1 .one_picture {
+                            padding-bottom: 10px;
+                            height: 170px;
+                        }
+                        .five_pictures .three_row .three_row_box1 {
+                padding-bottom: 10px;
+                height: 170px;
+            }
+            .five_pictures .one_row .one_row_box1 .one_picture img {
+    height:170px;
+                            }
+                            .five_pictures .one_row .one_row_box2 .two_picture img{
+                height:170px;
+                                            }
+        .five_pictures .two_row .two_row_box1 .three_picture .blocks-image img {
+        height: 350px;
+    width: 100%;
+                            }
+          .five_pictures .three_row .four_picture img {
+                height:170px;
+                                    }
+        .five_pictures .three_row .five_picture img {
+    height:170px;
+                    }
+    .five_pictures .one_row{
+        width:25%;
+    }
+    .five_pictures .three_row{
+        width:25%;
+    }
+    .five_pictures .two_row {
+        width: calc(50% - 20px);
+        float: left;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .big_box{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+    top: 18%;
+    }
+    .five_pictures .button1{
+    top: 31%;
+    left: 53%;
+    }
+    .five_pictures .one_row .one_row_box2 .text2 {
+    top: 69%;
+    }
+    .five_pictures .one_row .one_row_box2 .button2{
+    top: 82%;
+                    }
+                    .five_pictures .two_row .two_row_box1 .text1{
+        top: 43%;
+                                    }
+    
+    .five_pictures .button2   {
+        top: 80%;
+        left: 53%;
+    }
+    .five_pictures .button3{
+    top: 57%;
+    }
+    .five_pictures .three_row .three_row_box1 .text1{
+    top: 18%;
+    }
+    .five_pictures .button4 {
+    top: 31%;
+        left: 53%;
+    }
+    
+    .five_pictures .three_row .three_row_box2 .text2 {
+        top: 69%;
+                    }
+                    
+                    
+    .five_pictures .button5{
+    top: 82%;
+        left: 53%;
+    }
+}
+    @media screen and (max-width:800px) {
+        .five_pictures .one_row .one_row_box1 .one_picture {
+                            padding-bottom: 10px;
+                            height: 150px;
+                        }
+                        .five_pictures .three_row .three_row_box1 {
+                padding-bottom: 10px;
+                height: 150px;
+            }
+                .five_pictures .one_row .one_row_box1 .one_picture img {
+    height: 150px;
+                                }
+                                .five_pictures .one_row .one_row_box2 .two_picture img {
+                    height: 150px;
+                                                }
+.five_pictures .two_row .two_row_box1 .three_picture .blocks-image img{
+        height:310px;
+    }
+.five_pictures .three_row .four_picture img{
+        height:150px;
+    }
+.five_pictures .three_row .five_picture img{
+        height:150px;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .one_row .one_row_box2 .text2 {
+        width:100%;
+    }
+    .five_pictures .two_row .two_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .three_row .three_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .three_row .three_row_box2 .text2{
+        width:100%;
+    }
+}
+
+    .five_pictures .button2   {
+        top: 80%;
+    }
+}
+    @media screen and (max-width:600px) {
+        .five_pictures .button1{
+                    left:52%;
+                }
+                .five_pictures .button2{
+            left:53%;
+        }
+        .five_pictures .one_row .one_row_box1 .one_picture {
+        padding-bottom: 10px;
+    }
+    .five_pictures .three_row .three_row_box1 {
+        padding-bottom: 10px;
+    }
+.five_pictures .one_row .one_row_box1 .one_picture img{
+        height:140px;
+    }
+.five_pictures .one_row .one_row_box2 .two_picture img{
+        height:140px;
+    }
+.five_pictures .two_row .two_row_box1 .three_picture .blocks-image img{
+        height:290px;
+    }
+.five_pictures .three_row .four_picture img{
+        height:140px;
+    }
+.five_pictures .three_row .five_picture img{
+        height:140px;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .one_row .one_row_box2 .text2 {
+        width:100%;
+    }
+    .five_pictures .two_row .two_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .three_row .three_row_box1 .text1{
+        width:100%;
+    }
+    .five_pictures .three_row .three_row_box2 .text2{
+        width:100%;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+    top:18%;
+                    }
+                    .five_pictures .button1{
+            top:28%;
+                            }
+}
+    @media screen and (max-width: 500px) {
+        .five_pictures .one_row .one_row_box1 .one_picture img {
+    height:150px;
+                        }
+                        
+                        .five_pictures .three_row .five_picture img {
+                height:150px;
+                                    }
+                                    
+                                    .five_pictures .two_row .two_row_box1 .three_picture .blocks-image img {
+     width: 100%;
+    height: 300px;
+                                                        }
+        
+                            .big_box{
+                            padding-left:5px;
+                            padding-right:5px;
+                        }
+                        .five_pictures .one_row{
+                    width: 100%;
+                    float: left;
+                    position: relative;
+                    padding-bottom: 0;
+                }
+                .five_pictures .one_row .one_row_box1{
+        width: calc(50% - 5px);
+        padding-right: 5px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .one_row .one_row_box2{
+        width: calc(50% - 5px);
+        padding-left: 5px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .two_row{
+        width:100%;
+        float:left;
+        position:relative;
+        padding-left:0;
+        padding-right:0;
+        margin:0 auto;
+        padding-bottom: 10px;
+    }
+    .five_pictures .three_row{
+        width:100%;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .three_row .three_row_box1{
+        width: calc(50% - 5px);
+        padding-right: 5px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .three_row .three_row_box2{
+        width: calc(50% - 5px);
+        padding-left: 5px;
+        float:left;
+        position:relative;
+    }
+    .five_pictures .one_row .one_row_box1 .text1{
+        width:100%;
+        top: 35%;
+    }
+    .five_pictures .button1{
+        top: 63%;
+        left: 52%;
+    }
+    .five_pictures .one_row .one_row_box2 .text2 {
+    width: 100%;
+    top: 38%;
+    }
+
+    .five_pictures .two_row .two_row_box1 .text1{
+        width:100%;
+        left: 50%;
+        top: 40%;
+    }
+    .five_pictures .button3{
+        top: 56%;
+    }
+    .five_pictures .three_row .three_row_box1 .text1{
+        width:100%;
+        top: 35%;
+    }
+    .five_pictures .button4 {
+        top: 63%;
+        left: 52%;
+    }
+    .five_pictures .three_row .three_row_box2 .text2{
+        width:100%;
+		top: 36%;
+        left: 50%;
+    }
+    .five_pictures .button5{
+top: 66%;
+    left: 55%;
+    }
+    
+    .five_pictures .one_row .one_row_box2 .button2 {
+        top: 66%;
+    left: 55%;
+                    }
+    .five_pictures .one_row .one_row_box2 .two_picture img {
+        height: 150px;
+                    }
+    
+    .five_pictures .three_row .four_picture img {
+            height: 150px;
+                }
+}</style>

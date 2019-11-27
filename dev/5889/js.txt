@@ -1,0 +1,90 @@
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "qukuai5869";
+        var blockNamespace = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                         );
+        $.extend(blockNamespace, {
+            "init": init
+        }
+                )
+        function init(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');                            
+
+            
+
+function changeWid(){
+ var $ulWid=$(".bi_wrapper_1028 ul").width();
+    var $liLen=$(".bi_wrapper_1028 li").length;
+    if($liLen<4){
+        var $w3=$liLen*20;
+        var $w2=$ulWid-$w3;
+        var $w1=$w2 / $liLen;
+       var $w4 = Math.floor($w1) - 1;
+        console.log($w4);
+        $(".bi_package_1028").width($w4);
+      
+    }
+}
+
+
+            var $slider;
+            changeWid();
+            var $a1=$(".bi_wrapper_1028").width();  
+            if($a1<550){
+                createSlick();
+                   
+            }
+            $(window).resize(function () {
+                //console.log(this.innerWidth);
+                var innerWidth = this.innerWidth;
+                changeWid();
+                var $liLen1=$(".bi_wrapper_1028 li").length;
+                if (innerWidth < 550 && $liLen1 >= 4) {
+                    createSlick();
+                    $(".bi_wrapper_1028 .bi_package_1028").css("margin","30px 0 20px 0");
+              
+                }
+                else if (innerWidth < 550 && $liLen1 < 4) {
+                    removeSlick();
+                    $(".bi_wrapper_1028 .bi_package_1028").css("margin","30px 10px 20px 10px");
+                }
+                else{
+                    removeSlick();
+                     $(".bi_wrapper_1028 .bi_package_1028").css("margin","0 10px 20px 10px");
+                }
+            }
+                            );
+            function createSlick() {
+                if (!$slider) {
+                    $slider = $('.bi_ulStyle_1028').slick({
+                        infinite: true,
+                    centerMode:true,
+                          centerPadding: '0px',
+                        slidesToShow: 3,
+                        slidesToscroll: 1
+                    }
+                                                         );
+                }
+            }
+            function removeSlick() {
+                if ($slider) {
+                    $slider.slick('unslick');
+                }
+                $slider = null;
+            }
+            
+            
+            
+
+
+
+ 
+        }
+    }
+    )(window, jQuery);</script>

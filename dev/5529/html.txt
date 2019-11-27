@@ -1,0 +1,269 @@
+[#assign color0 = '#c61717']
+[#assign color1 = '#B1B1B1']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_frontend]
+<style>
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .one_row .one_row_box1 .right-button1 {
+        background-color:$ {
+            color0 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .one_row .one_row_box1 .grey-button1 {
+        background-color:$ {
+            color1 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .one_row .one_row_box2 .right-button2 {
+        background-color:$ {
+            color0 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .one_row .one_row_box2 .grey-button2 {
+        background-color:$ {
+            color1 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .two_row .two_row_box1 .right-button3 {
+        background-color:$ {
+            color0 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .two_row .two_row_box1 .grey-button3 {
+        background-color:$ {
+            color1 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .three_row .three_row_box1 .right-button4 {
+        background-color:$ {
+            color0 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .three_row .three_row_box1.grey-button4 {
+        background-color:$ {
+            color1 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .three_row .three_row_box2 .right-button5 {
+        background-color:$ {
+            color0 !
+        }
+    }
+
+    #siteblocks-setting-wrap-$ {
+        componentBlock.settingId !
+    }
+
+    .five_pictures .three_row .three_row_box2 .grey-button5 {
+        background-color:$ {
+            color1 !
+        }
+    }
+</style>
+[/@web_frontend]
+<div class="five_pictures clearfix">
+    <div class="backstage-blocksEditor-wrap title" data-wrap-type="1" data-storage="0"
+        data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=6d2d15e2-918d-4e12-99fe-4e26265744d2>Featured Car
+        Models</div>
+    <div class="big_box">
+        <div class="one_row">
+            <div class="one_row_box1">
+                <div class="backstage-blocksEditor-wrap one_picture" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=be28be82-7182-4a41-a7df-607bb5346369><div class="backstage-componet">
+                        <div class="backstage-componet-bd">
+                            <a class="blocks-image" href=""><img
+                                    src="//a0.leadongcdn.cn/cloud/mpBqjKlqRipSjjqlpkjq/1.png" alt="" title=""></a>
+                        </div>
+                    </div></div>
+                <div class="backstage-blocksEditor-wrap text1" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=16aa596c-6e40-444b-a39d-11f2b7a143c5>Mercedes-Benz</div>
+                <div class="button1">
+                    <div class="grey-button1"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                        [/@web_backend]> [@phoenix_layout_node nodeId='-1' appId='bkUpfAKKPaho' ajaxFlag='0'
+                        ajaxOptions='' appIsDev='${componentBlock.appIsDev!}'
+                        settingId='${componentBlock.settingId!}' /] </div> <div class="right-button1"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"
+                        [/@web_backend]> <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_button"
+                        data-auto_uuid=830ef7eb-4356-40bd-b847-33a60e751476><div class="backstage-componet">
+                            <div class="backstage-componet-bd">
+                                <a class="blocks-button" href="">READ MORE</a>
+                            </div>
+                        </div></div>
+                </div>
+                </div>
+            </div>
+            <div class="one_row_box2">
+                <div class="backstage-blocksEditor-wrap two_picture" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=dea11c36-340c-48e4-b924-391b5af4fc2d><div class="backstage-componet">
+                        <div class="backstage-componet-bd">
+                            <a class="blocks-image" href=""><img src="//a0.leadongcdn.cn/cloud/mjBqjKlqRipSjjqliljq/2.png"
+                                    alt="" title=""></a>
+                        </div>
+                    </div></div>
+                <div class="backstage-blocksEditor-wrap text2" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=5b6288c9-c0f2-4c02-bf1b-e18c81315c5f>BMW</div>
+                <div class="button2">
+                    <div class="grey-button2"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                        [/@web_backend]> [@phoenix_layout_node nodeId='-1' appId='bkUpfAKKPaho' ajaxFlag='0' ajaxOptions=''
+                        appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /] </div> <div
+                        class="right-button2"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"
+                        [/@web_backend]> <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_button" data-auto_uuid=2149a451-4fe9-4da6-beb3-dc24d41a638d><div class="backstage-componet">
+                            <div class="backstage-componet-bd">
+                                <a class="blocks-button" href="">READ MORE</a>
+                            </div>
+                        </div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="two_row">
+            <div class="two_row_box1">
+                <div class="backstage-blocksEditor-wrap three_picture" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=789b88ec-1892-480c-83ea-d4da1d6a3180><div class="backstage-componet">
+                        <div class="backstage-componet-bd">
+                            <a class="blocks-image" href=""><img
+                                    src="//a0.leadongcdn.cn/cloud/mqBqjKlqRipSjjqloljq/3.png" alt="" title=""></a>
+                        </div>
+                    </div></div>
+                <div class="backstage-blocksEditor-wrap text1" data-wrap-type="1" data-storage="0"
+                    data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=379386cb-c278-486d-8a14-242cac2d10fb>Toyota</div>
+                <div class="button3">
+                    <div class="grey-button3"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                        [/@web_backend]> [@phoenix_layout_node nodeId='-1' appId='bkUpfAKKPaho' ajaxFlag='0'
+                        ajaxOptions='' appIsDev='${componentBlock.appIsDev!}'
+                        settingId='${componentBlock.settingId!}' /] </div> <div class="right-button3"
+                        [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"
+                        [/@web_backend]> <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_button"
+                        data-auto_uuid=fa5b7ab0-8a0d-475e-b837-b3dff104dfd0><div class="backstage-componet">
+                            <div class="backstage-componet-bd">
+                                <a class="blocks-button" href="">READ MORE</a>
+                            </div>
+                        </div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="three_row">
+                <div class="three_row_box1">
+                    <div class="backstage-blocksEditor-wrap four_picture" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_image"
+                        data-auto_uuid=0727e8d3-f3f7-4587-9895-21158bca4ac9><div class="backstage-componet">
+                            <div class="backstage-componet-bd">
+                                <a class="blocks-image" href=""><img
+                                        src="//a0.leadongcdn.cn/cloud/mkBqjKlqRipSjjqlinjq/4.png" alt="" title=""></a>
+                            </div>
+                        </div></div>
+                    <div class="backstage-blocksEditor-wrap text1" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_text"
+                        data-auto_uuid=7173eca9-3e49-433f-ade0-cc78729bd1bb>AUDI</div>
+                    <div class="button4">
+                        <div class="grey-button4"
+                            [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                            [/@web_backend]> [@phoenix_layout_node nodeId='-1' appId='bkUpfAKKPaho' ajaxFlag='0'
+                            ajaxOptions='' appIsDev='${componentBlock.appIsDev!}'
+                            settingId='${componentBlock.settingId!}' /] </div> <div class="right-button4"
+                            [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"
+                            [/@web_backend]> <div class="backstage-blocksEditor-wrap" data-wrap-type="1"
+                            data-storage="0" data-blocksEditor-type="phoenix_blocks_button"
+                            data-auto_uuid=91d32171-2b1f-4c35-807c-5bb434938a8a><div class="backstage-componet">
+                                <div class="backstage-componet-bd">
+                                    <a class="blocks-button" href="">READ MORE</a>
+                                </div>
+                            </div></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="three_row_box2">
+                    <div class="backstage-blocksEditor-wrap five_picture" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_image"
+                        data-auto_uuid=40625558-8b8c-46bb-b519-84e7ee8a05af><div class="backstage-componet">
+                            <div class="backstage-componet-bd">
+                                <a class="blocks-image" href=""><img
+                                        src="//a0.leadongcdn.cn/cloud/mqBqjKlqRipSjjqlnnjq/5.png" alt="" title=""></a>
+                            </div>
+                        </div></div>
+                    <div class="backstage-blocksEditor-wrap text2" data-wrap-type="1" data-storage="0"
+                        data-blocksEditor-type="phoenix_blocks_text"
+                        data-auto_uuid=3167efd8-0b31-4720-8075-1c956426dfcc>Subaru</div>
+                    <div class="button5">
+                        <div class="grey-button5"
+                            [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                            [/@web_backend]> [@phoenix_layout_node nodeId='-1' appId='bkUpfAKKPaho' ajaxFlag='0'
+                            ajaxOptions='' appIsDev='${componentBlock.appIsDev!}'
+                            settingId='${componentBlock.settingId!}' /] </div> <div class="right-button5"
+                            [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"
+                            [/@web_backend]> <div class="backstage-blocksEditor-wrap" data-wrap-type="1"
+                            data-storage="0" data-blocksEditor-type="phoenix_blocks_button"
+                            data-auto_uuid=929108be-6dda-4306-89af-45fa48811446><div class="backstage-componet">
+                                <div class="backstage-componet-bd">
+                                    <a class="blocks-button" href="">READ MORE</a>
+                                </div>
+                            </div></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+

@@ -1,0 +1,198 @@
+
+
+
+<style>.zh_20191022{
+        max-width:1200px;
+        margin: 0 auto;
+    }
+    .clearfix {
+    clear: both;
+    zoom: 1;
+}
+    .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+    .zh_20191022 .text{
+        width: calc(25% - 20px);
+        float: left;
+        margin-top: 50px;
+        margin-bottom: 35px;
+        padding: 0 10px;
+        position: relative;
+    }
+    .zh_20191022 .text .subtitle{
+        font-size: 18px;
+        color: #212121;
+        position: relative;
+            margin-left: 115px;
+        margin-bottom: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .zh_20191022 .text .line{
+        position: absolute;
+        content: '';
+        width: 110px;
+        height: 2px;
+        background: #2e2e2e;
+        left: 9px;
+        top: 11px;
+    }
+    .zh_20191022 .text .title1{
+        font-size: 42px;
+        color: #212121;
+        word-break: break-all;
+    }
+    .zh_20191022 .text .title2{
+        font-size: 18px;
+        color: #212121;
+           word-break: break-all;
+    }
+    .zh_20191022 .text .arcitle{
+        font-size: 18px;
+        color: #212121;
+        margin:30px 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+        overflow: hidden;
+            text-overflow: ellipsis;
+    }
+    .zh_20191022 .text .anniu{
+        display: inline-block;
+            max-width: 100%;
+        border: 1px solid;
+    }
+    .zh_20191022 .text .anniu .backstage-componet{
+       max-width: 100%;
+                    }
+    .zh_20191022 .text .anniu .blocks-button{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: inherit;
+    padding: 15px 40px;
+    }
+    .zh_20191022 .img{
+        width:75%;
+        float: right;
+        display: flex;
+        margin: 20px 0;
+    }
+    .zh_20191022 .img .img1{
+        width: calc(33.33333333% - 20px);
+        padding: 0 10px;
+        position: relative;
+        top: 0;
+    }
+    .zh_20191022 .img .img2{
+        width: calc(33.33333333% - 20px);
+        padding: 0 10px;
+        position: relative;
+        top: 0;
+    }
+    .zh_20191022 .img .img3{
+        width: calc(33.33333333% - 20px);
+        padding: 0 10px;
+        position: relative;
+        top: 0;
+    }
+    .zh_20191022 .img .img_container{
+        max-width:280px;
+        height:430px;
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+             justify-content: center;
+    }
+    .zh_20191022 .img .img1:hover{
+        top: -10px;
+        transition: all .3s;
+    }
+    .zh_20191022 .img .img2:hover{
+        top: -10px;
+        transition: all .3s;
+    }
+    .zh_20191022 .img .img3:hover{
+        top: -10px;
+        transition: all .3s;
+    }
+    .zh_20191022 .img .blocks-image img{
+        width:100%;
+        display: block;
+    }
+    .zh_20191022 .img .text1{
+        text-align: center;
+        font-size: 24px;
+        color: #212121;
+        height: 70px;
+        line-height: 70px;
+        background-color:#EDECED ;
+    }
+    .zh_20191022 .img .text1 .js{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+ 
+    @media screen and (max-width: 992px){
+        .zh_20191022{
+                padding-bottom: 20px;
+            }
+            .zh_20191022 .text{
+        width: calc(100% - 20px);
+          margin-bottom: 0;
+    }
+    
+    .zh_20191022 .text .BK{
+        margin-bottom: 40px;
+                }
+    .zh_20191022 .img{
+        width: 100%;
+        float: unset;
+        margin: 0 auto;
+    }
+    
+    .zh_20191022 .img .img_container{
+        height: 430px;
+        display: unset;
+        align-items: center;
+        transition: all .3s;
+        overflow: hidden;
+    }
+    .zh_20191022 .text .anniu .blocks-button{
+        max-width: unset;
+    }
+}
+    @media screen and (max-width: 650px){
+        .zh_20191022 .img .blocks-image img{
+                width: calc(100% + 80px);
+                    }
+                    .zh_20191022 .img .img2 .img_container img{
+        box-shadow: 0 0 7px #9C9C9C;
+    }
+    .zh_20191022 .img .img2 .text1{
+        box-shadow: 0 0 7px #9C9C9C;
+    }
+    .zh_20191022 .img .img3 .img_container img{
+        box-shadow: 0 0 7px #9C9C9C;
+    }
+    .zh_20191022 .img .img3 .text1{
+        box-shadow: 0 0 7px #9C9C9C;
+    }
+    .zh_20191022 .img .text1{
+        width: calc(100% + 80px);
+    }
+    .zh_20191022 .img .img3{
+        width: unset;
+    }
+   
+}</style>
+

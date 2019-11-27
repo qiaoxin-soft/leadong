@@ -1,0 +1,94 @@
+[#assign color0 = '#7f7051']
+[#assign color1 = '#bda77a']
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+[/#if]
+
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal1?? ]
+        [#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+    [/#if]
+[/#if]
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!} .slick-prev:after{ border-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .slick-next:after{ border-color:${color0!}}   
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li .nub_line .nub{ color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li .line{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li .banner-docs{ color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li .banner-docsT{ color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li:hover .mask { border-color:${color0!}}
+</style>
+[/@web_frontend]
+
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_module_container .zh_xfbk .zh ul li .banner-name{ color:${color1!}}
+</style>
+[/@web_frontend]
+
+
+<div class="zh_module_container">
+        <div class="zh_xfbk">          
+            <div class="wow">
+                <div class="backstage-blocksEditor-wrap title" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=93512375-c935-4c6e-ad19-5ca5f132ee14>≥ËŒÔ“∞ ﬁ</div>
+                <div class="backstage-blocksEditor-wrap subtitle" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=18af142a-2605-4529-8f25-db7dd3bd092c>Animal Artist</div>
+            </div>
+<div class="backstage-blocksEditor-wrap navigation zh" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=bde6eb3f-c039-4aab-a805-64ddc00356d8><div class="siteblocks-header-banner">
+        <ul>
+            [@gallery photos="${photo_ids!}" showAllFlag=true]				[#if gallery_data?? || (gallery_data?size)>0]					[#list gallery_data as photo]						
+            <li>
+                <div class="nub_line">
+                    <div class="nub" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]><span></span></div>
+                    <div class="line" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]></div>
+                </div>
+                <a class="mask" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]> 
+                </a>
+                [#if photo.linkJson?? && photo.linkJson!='']
+                <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                    [/#if]							
+                    <picture class="img_container">
+                        <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                        <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                        <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                    </picture>
+                    [#if photo.linkJson?? && photo.linkJson!='']
+                </a>
+                [/#if]	                        	             			
+                <div class="banner-description">
+                    [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                        <div class="banner-name" [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                            ${photo.trans_photoAlt!?html}
+                        </div>
+                        [/#if]	 
+                    <div class="container">
+                                                       [#if photo.trans_descJson?? && photo.trans_descJson!='']
+                        <div class="banner-docs" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                            ${photo.trans_descJson!}
+                        </div>
+                         <div class="banner-docsT" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                              ${photo.trans_descJson!}
+                        </div>
+                        [/#if]	             					[#if photo.linkJson?? && photo.linkJson!='']
+                        <a class="moreBtn" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                            Learn More
+                        </a>
+                        [/#if]	                            
+                    </div>
+                </div>
+            </li>
+           
+            [/#list]				[#elseif (gallery_data?size)==0]	            	no data.				[/#if]			[/@gallery]
+           
+        </ul>
+     [@web_javascript collect="true"
+            pm_script="${settingId!}" jumpTo="${settingId!}" ] $(function(){
+            window._block_namespaces_['fly_sky'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'}); 
+    });
+            [/@web_javascript] 
+    </div></div>
+    </div>
+    </div>
+

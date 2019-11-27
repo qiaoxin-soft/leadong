@@ -1,0 +1,80 @@
+[#assign color0 = '#3D80AB']
+[#assign color1 = '#FFFFFF']
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+    [#if componentBlock.blockStyleClass.colorVal1?? ]
+        [#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+    [/#if]
+[/#if]
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_20191022 .text .BK{ color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_20191022 .text .anniu:hover .blocks-button{ color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_20191022 .text .line{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_20191022 .text .anniu { background-color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .zh_20191022 .text .anniu:hover { background-color:${color0!}}
+</style>
+[/@web_frontend]
+[@web_backend]<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"></i> [/@web_backend]
+[@web_backend]<i data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"></i> [/@web_backend]
+
+
+<div class="zh_20191022 clearfix">
+    <div class="text">
+       <div class="ht">
+        <div class="line" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>[@phoenix_layout_node nodeId='-1' appId='fiKfpUAAkHlJ' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div>
+        <div class="backstage-blocksEditor-wrap subtitle" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=fadba040-35d1-4107-b95b-bd9ce9b872e0>WHAT WE DO</div>
+        </div>
+           <div class="backstage-blocksEditor-wrap title1" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=a0269e8a-df0b-4db3-9f98-f872573e69da>SPECIALIZED IN PRODUCT</div>
+        <div class="backstage-blocksEditor-wrap title2" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=69472730-a511-4373-a97a-2c1db5b197e8>Economy is more affordable</div>
+        <div class="backstage-blocksEditor-wrap arcitle" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=70646b67-7141-4533-8159-ecd58e4786e6>This area can be fully edited and gives you the opportunity to introduce yourself, your website, your products or your services.This area can be fully edited and gives you the opportunity to introduce yourself,</div>
+      
+            <div class="BK" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>
+        <div class="backstage-blocksEditor-wrap anniu" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_button" data-auto_uuid=c0e30380-ecc4-4823-abc9-aa2c13876296 [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]><div class="backstage-componet" >
+                <div class="backstage-componet-bd" >
+                    <a class="blocks-button" href="">
+                        View More
+                    </a>
+                </div></div></div></div>
+    </div>
+    <div class="img">
+        <div class="img1">
+            <div class="backstage-blocksEditor-wrap img_container" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=dc2ae55c-e1c0-4c9b-aaae-e3fd211be7a6><div class="backstage-componet">
+                    <div class="backstage-componet-bd">
+                        <a class="blocks-image" href="">
+                            <img src="//a2.leadongcdn.cn/cloud/mkBpoKjjRmpSnpmkpmor/1.jpg" alt="" title="">
+                        </a>
+                    </div>
+                </div></div>
+            <div class="text1">
+                <div class="backstage-blocksEditor-wrap js" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=c909b6d8-1224-4903-b53c-1cea0ac3abdd>TILE</div>
+            </div>
+        </div>
+        <div class="img2">
+            <div class="backstage-blocksEditor-wrap img_container" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=e05fe277-da5b-4fda-8796-3f60a9c312e0><div class="backstage-componet">
+                    <div class="backstage-componet-bd">
+                        <a class="blocks-image" href="">
+                            <img src="//a2.leadongcdn.cn/cloud/mrBqoKjjRmpSnprljrop/2.jpg" alt="" title="">
+                        </a>
+                    </div>
+                </div></div>
+            <div class="text1">
+                <div class="backstage-blocksEditor-wrap js" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=dbdaa021-b950-421d-905e-dc4b14ca588f>SPC</div>
+            </div>
+        </div>
+        <div class="img3">
+            <div class="backstage-blocksEditor-wrap img_container" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image" data-auto_uuid=24ac46e6-6f80-475b-9325-fd5718b8fa53><div class="backstage-componet">
+                    <div class="backstage-componet-bd">
+                        <a class="blocks-image" href="">
+                            <img src="//a3.leadongcdn.cn/cloud/mjBqoKjjRmpSnprllrop/3.jpg" alt="" title="">
+                        </a>
+                    </div>
+                </div></div>
+            <div class="text1">
+                <div class="backstage-blocksEditor-wrap js" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=92e5c99f-5c5f-49e5-9ce9-d94abf224a95>MOSAIC</div>
+            </div>
+        </div>
+    </div>
+</div>

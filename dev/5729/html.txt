@@ -1,0 +1,65 @@
+[#assign color0 = '#1E6794']
+[#assign color1 = '#FFFFFF']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_frontend]
+<style>
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .icon{ color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .zh{ border-color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .i span{ color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .bkc:hover{ background-color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .bkc{ background-color:${color1!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .zh:hover .blocks-button i{ color:${color1!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1 .zh:hover span{ color:${color1!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .zh_191018 .submit1{ color:${color0!};}
+</style>
+[/@web_frontend]
+[@web_backend]<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"></i> [/@web_backend]
+[@web_backend]<i data-blocksetting-color="{'border-color':'colorVal-1-${color1!}'}"></i> [/@web_backend]
+[@web_backend]<i data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"></i> [/@web_backend]
+[@web_backend]<i data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"></i> [/@web_backend]
+<div class="zh_191018">
+    <div class="backstage-blocksEditor-wrap icon" data-wrap-type="1" data-relate-appId="VyUfpAKffFmg" data-storage="1" data-blocksEditor-type="phoenix_blocks_fontIcon" data-auto_uuid=1e1bfdf5-a0d0-4d39-b494-0227b22c8b63 [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]><div class="sitewidget-common-fontIcon">
+            [#if linkAddress?? && linkAddress != '']
+            <a [@phoenix_linkUrl linkJson="${linkAddress!}" ] [/@phoenix_linkUrl]>
+                [/#if]         
+                <span>
+                    [#if iconClass??]         [#if iconClass?index_of("block-icon")!=-1]            
+                    <i class="block-icon ${iconClass!?html}" style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;">
+                    </i>
+                    [#else]            
+                    <i class="fa ${iconClass!?html}" style="color:${fontIconColor!?html};font-size:${fontIconSize!?html}px;">
+                    </i>
+                    [/#if]         [#else]         	
+                    <i class="fa fa-envelope-o">
+                    </i>
+                    [/#if]         
+                </span>
+                [#if linkAddress?? && linkAddress != '']
+            </a >
+            [/#if]    
+        </div></div>
+    <div class="backstage-blocksEditor-wrap text" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=7a9fadf2-a673-474a-8d0e-ce390cbfa15f><h2>PROFESSIONAL QUALITY
+        </h2></div>
+    <div class="submit1"  [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>
+        
+    <div class="bkc" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend] >
+        
+        <div class="backstage-blocksEditor-wrap zh " data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_button" data-auto_uuid=8ba35dc6-afcb-4622-816f-6cd25e7ed452 [@web_backend]data-blocksetting-color="{'border-color':'colorVal-0-${color0!}'}"[/@web_backend] ><div class="backstage-componet hz" >
+            <div class="backstage-componet-bd">
+                <a class="blocks-button" href="">
+                    <span></span>
+                    <i class="font-icon fa fa-angle-right">
+                    </i>
+                </a>
+            </div>
+        </div></div></div></div>
+    
+    
+</div>
