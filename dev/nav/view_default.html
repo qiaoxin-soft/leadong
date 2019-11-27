@@ -1,0 +1,290 @@
+[#assign color0 = 'rgba(0,0,0,0.4)']
+[#assign color1 = '#707070']
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+	[#if componentBlock.blockStyleClass.colorVal1?? ]
+        [#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+    [/#if]
+[/#if]
+[@web_frontend]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+    .sq_header_1{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .sq_nav_1 .navigation ul li>.sub>ul>li>a{ color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .sq_nav_1 .navigation ul li>.sub>ul>li>ul>li>a{ color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .sq_nav_1 .navigation ul li>.sub>ul>li{ border-color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .lang-list li a{ color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_3 .sq_nav_1 .navigation ul li a{ color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_3 .sq_nav_1 .navigation ul li .fa.fa-angle-down{ color:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1_screen{ background-color:${color1!}!important;}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1 .sq_nav_1 .navigation ul li .sub ul li a:before{ background:${color1!};}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_header_1{ background-color:${color0!};}
+[/@web_style]
+[/@web_frontend]
+[@web_backend]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+    .sq_header_1{
+        background:#ccc;
+    }
+    .sq_header_1 .sq_right_1 .sq_language_1 .lang-show-word .sq_language_span{
+        margin-top: -4px;
+    }
+    .sq_header_1{
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+    }
+    .sq_header_1_screen{
+        top: 0px;
+        z-index: 11;
+    }
+[/@web_style]
+[/@web_backend]
+<div class="sq_header_1 sq_header_2" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+    <i data-blocksetting-color="{'color':'colorVal-1-${color1!}'}" style="display:none;"></i>
+    <div class="sq_header_1Hover">[@phoenix_layout_node nodeId='-1' appId='OGKApUfKYrMg' ajaxFlag='0' ajaxOptions='' appIsDev='${componentBlock.appIsDev!}' settingId='${componentBlock.settingId!}' /]</div> 
+    <div class="sq_icon_1">
+        <div class="backstage-blocksEditor-wrap sq_icon_img" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_image"><div data-suggest_width="200" data-suggest_height="66" class="backstage-componet">
+                <div class="backstage-componet-bd">
+                    <a class="blocks-image" href="">
+                        <img src="//a0.leadongcdn.cn/cloud/imBqjKlqRinSjjljqijn/logo1fuben.png" alt="" title="">
+                    </a>
+                </div>
+            </div></div>
+    </div>
+    <div class="sq_nav_1">
+        <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MRAUpfKKpsgB" data-storage="1" data-blocksEditor-type="phoenix_blocks_navigation">[@json json="${navigatePicMap!}"]
+            <ul class="blockNavBar fix">
+                [#assign currentNavName="" ]
+                [@group groupType="2" groupLevel="3" ]
+                [#list groupList as nav]
+                [@encypt id="${nav.navId}" method="decode"]
+                [#assign topnavId = "navId_${resultId}"]
+                [/@encypt]
+                <li id="parent_${nav_index}">
+                    [#assign currentIndex='']
+                    [#if nav.currentFlag??]
+                    [#assign currentIndex=nav_index]
+                    [#assign currentNavName=nav.navName!?html]
+                    [/#if]
+                    [#assign visible = true]
+                    [#assign icon = ""]
+                    [#if jsonMap?? && jsonMap[topnavId]??]
+                    [#if jsonMap[topnavId].isOpenNew?? && jsonMap[topnavId].isOpenNew == 'true']
+                    [#assign target="_blank"]
+                    [#else]
+                    [#assign target="_self"]
+                    [/#if]
+                    [#if jsonMap[topnavId].isVisible?? && jsonMap[topnavId].isVisible == 'false']
+                    [#assign visible = false]
+                    [#else]
+                    [#assign visible = true]
+                    [/#if]
+                    [#if jsonMap[topnavId].isNofollow?? && jsonMap[topnavId].isNofollow == 'true']
+                    [#assign rel="nofollow"]
+                    [#else]
+                    [#assign rel=""]
+                    [/#if]
+                    [#if jsonMap[topnavId].picName??]
+                    [#assign picName = '${jsonMap[topnavId].picName!""}']
+                    [/#if]
+                    [#if jsonMap[topnavId].picId??]
+                    [#assign picId = '${jsonMap[topnavId].picId!""}']
+                    [/#if]
+                    [#if jsonMap[topnavId].icohtml??]
+                    [#assign icon = jsonMap[topnavId].icohtml]
+                    [/#if]
+                    [/#if]
+                    <a id="${nav.navId}" target="${target!}" href="${nav.navUrl!}" data-currentIndex="${currentIndex!''}"
+                    [#if subNav?? && subNav.navType?? && "4" == subNav.navType]anchor-link="true"[/#if] >
+                        ${nav.navName!?html}
+                    </a>
+                    [#if nav.hasSub?? == true]
+                    <i class="fa fa-angle-down icon ${icon!'fa fa-angle-down'}">
+                    </i>
+                    [/#if] 
+                    [#if nav.hasSub?? == true]
+                    <div class="sub">
+                        <ul class="subUl">
+                            [#list nav.subGroups as subNav]
+                            [@encypt id="${subNav.navId}" method="decode"]
+                            [#assign subnavId = "navId_${resultId}"]
+                            [/@encypt]
+                            [#assign visible = true]
+                            [#if jsonMap?? && jsonMap[subnavId]??]
+                            [#if jsonMap[subnavId].isOpenNew == 'true']
+                            [#assign target="_blank"]
+                            [#else]
+                            [#assign target="_self"]
+                            [/#if]
+                            [#if jsonMap[subnavId].isVisible?? && jsonMap[subnavId].isVisible == 'false']
+                            [#assign visible = false]
+                            [#else]
+                            [#assign visible = true]
+                            [/#if]
+                            [#if jsonMap[subnavId].isNofollow?? && jsonMap[subnavId].isNofollow == 'true']
+                            [#assign rel="nofollow"]
+                            [#else]
+                            [#assign rel=""]
+                            [/#if]
+                            [/#if]
+                            <li>
+                                [#assign currentIndex='']
+                                [#if subNav.currentFlag??]
+                                [#assign currentIndex=nav_index]
+                                [#assign currentNavName=subNav.navName!?html]
+                                [/#if]
+                                <a target="${target!}" rel="${rel!}" href="${subNav.navUrl!}">
+                                    ${subNav.navName!?html}
+                                </a>
+                                [#if subNav.hasSub?? == true]
+                                <i class="icon [#if jsonMap?? && jsonMap[subnavId]?? && jsonMap[subnavId].icohtml??] ${jsonMap[subnavId].icohtml!''} [#else]fa fa-angle-down[/#if]">
+                                </i>
+                                [/#if] 
+                                [#if jsonMap?? && jsonMap[subnavId]?? && jsonMap[subnavId].picId?? && jsonMap[subnavId].picId!='']
+                                <img src="[@ffsUrl pname="${jsonMap[subnavId].picName}" pid="${jsonMap[subnavId].picId}" width="400" height="160" /]" alt="${jsonMap[subnavId].picName!}">
+                                [/#if]
+                                [#if subNav.hasSub?? == true]
+                                <ul class="sub-nav" >
+                                    [#list subNav.subGroups as subSubNav]
+                                    [@encypt id="${subSubNav.navId}" method="decode"]
+                                    [#assign subsubnavId = "navId_${resultId}"]
+                                    [/@encypt]
+                                    [#assign visible = true]
+                                    [#if jsonMap?? && jsonMap[subsubnavId]??]
+                                    [#if jsonMap[subsubnavId].isOpenNew == 'true']
+                                    [#assign target="_blank"]
+                                    [#else]
+                                    [#assign target="_self"]
+                                    [/#if]
+                                    [#if jsonMap[subsubnavId].isVisible?? && jsonMap[subsubnavId].isVisible == 'false']
+                                    [#assign visible = false]
+                                    [#else]
+                                    [#assign visible = true]
+                                    [/#if]
+                                    [#if jsonMap[subsubnavId].isNofollow?? && jsonMap[subsubnavId].isNofollow == 'true']
+                                    [#assign rel="nofollow"]
+                                    [#else]
+                                    [#assign rel=""]
+                                    [/#if]
+                                    [#--
+                                    [@ffsUrl pname="${jsonMap[subsubnavId].picName}" pid="${jsonMap[subsubnavId].picId}" width="" height="" /]
+                                    --]
+                                    [/#if]
+                                    <li class="[#if !visible]hide[/#if]" data-visible="[#if visible]1[#else]0[/#if]">
+                                        [#assign currentIndex='']
+                                        [#if subSubNav.currentFlag??]
+                                        [#assign currentNavName=subSubNav.navName!?html]
+                                        [#assign currentIndex=nav_index]
+                                        [/#if]
+                                        <a id="nav_${subSubNav.navId}" class="sitewidget-sub-nav" target="${target!}" rel="${rel!}" data-currentIndex='${currentIndex!''}' href="${subSubNav.navUrl!}">
+                                            ${subSubNav.navName!?html}
+                                        </a>
+                                    </li>
+                                    [/#list]
+                                </ul>
+                                [/#if]
+                            </li>
+                            [/#list]
+                        </ul>
+                    </div>
+                    [/#if]
+                </li>
+                [/#list]
+                [/@group]
+            </ul>
+            [/@json]</div>
+    </div>
+    <div class="sq_right_1">
+        <div class="sq_search_1">
+            <div class="backstage-blocksEditor-wrap serach" data-wrap-type="1" data-relate-appId="PEfApUKpfjQL" data-storage="1" data-blocksEditor-type="phoenix_blocks_serach"><form action="/phoenix/admin/prod/search" method="get" novalidate>
+                    <div class="search-wrap">
+                        <div class="search-input">
+                            <input type="text" class="hide" name="searchValue" id="inputSearch" placeholder="${obligateKeyword!'Search'}" autocomplete="off" />
+                            <img src="//a0.leadongcdn.cn/cloud/inBqjKlqRinSojoqlmjq/sosuoxiao.png" alt="" title="">
+                            <button type="submit" class="hide">
+                                <img src="//a0.leadongcdn.cn/cloud/inBqjKlqRinSojoqlmjq/sosuoxiao.png" alt="" title="">
+                            </button>
+                        </div>
+                    </div>
+                </form></div>
+        </div>
+        <div class="sq_language_1">
+            <div class="backstage-blocksEditor-wrap langBar" data-wrap-type="1" data-relate-appId="PNpfKAUAiAnL" data-storage="1" data-blocksEditor-type="phoenix_blocks_langBar">[@table_select serviceName="phoenixLanguageService" lanViewParam="${lanViewParam!''}" showStyle="1" ]
+                [#if languages??]
+                [#list languages as language]
+                [#if language.currentFlag??]
+                [#assign langDropCurlan = "${language.languageDesc!''}"]
+                [#assign langDropCurlanCode = "${language.lanCode!''}"]
+                [/#if]
+                [/#list]
+                [/#if]
+                [/@table_select]
+                <div class="lang-show-word">
+                    <span class="sq_language_span">
+                        <img src="//a0.leadongcdn.cn/cloud/ipBqjKlqRinSjjllnrjn/language.png" alt="" title="">
+                        <span>${langDropCurlan!''}</span>
+                        <img src="//a0.leadongcdn.cn/cloud/ioBqjKlqRinSkjqiqnjo/jiantou.png" alt="" title="">
+                    </span>
+                </div>
+                <!--<a href="javascript:;" class="lang-slide-btn"><i class="fa fa-caret-down" aria-hidden="true"></i></a>-->
+                <ul class="lang-list hide">
+                    [@table_select serviceName="phoenixLanguageService" lanViewParam="${lanViewParam!''}" showStyle="1" ]
+                    [#if languages??]
+                    [#list languages as language]
+                    [#if language.currentFlag??]
+                    [#else]
+                    <li class="lang-item">
+                        <a href='${language.domainRecord!"javascript:void(0)"}'>
+                            ${language.languageDesc!''}
+                        </a>
+                    </li>
+                    [/#if]
+                    [/#list]
+                    [/#if]
+                    [/@table_select]
+                    [@json json="${langNew!''}" jsonArrayFlag="1"]
+                    [#if result??]
+                    [#list result as langNew]
+                    [#if langNew.langcheck=='1']
+                    [@web_backend]
+                    <li class="lang-item">
+                        <a href='javascript:void(0)'>
+                            ${langNew.langNewName!''}
+                        </a>
+                    </li>
+                    [/@web_backend]
+                    [@web_frontend]
+                    <li class="lang-item">
+                        <a href='${langNew.langNewUrl!"javascript:void(0)"}'>
+                            ${langNew.langNewName!''}
+                        </a>
+                    </li>
+                    [/@web_frontend]
+                    [#else]
+                    [/#if]
+                    [/#list]
+                    [/#if]
+                    [/@json]
+                </ul></div>
+        </div>
+        <div class="sq_nav_menu">
+        	<img class="fa-bars" src="//a0.leadongcdn.cn/cloud/ijBqjKlqRinSqjlmmrjq/osw-nav-mo.png" alt="" title="" width="22" height="22" style="cursor:pointer;">
+            <img class="fa-close" src="//a0.leadongcdn.cn/cloud/ioBqjKlqRinSqjlmjijo/osw-nav-mo.png" alt="" title="" width="18" height="18" style="cursor:pointer;">
+        </div>
+    </div>
+</div>
+[@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+$(function(){
+window._block_namespaces_['sq2HeaderOne'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+});
+[/@web_javascript]

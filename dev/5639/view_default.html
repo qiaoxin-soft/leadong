@@ -1,0 +1,72 @@
+[#assign color0 = '#eb3f57']
+[#assign color1 = '#7290b5']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(odd) .left .inTitle{color:${color0!}}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(even) .left .inTitle{color:${color1!}}
+	#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(odd) .left .icon{color:${color0!};border-color:${color0!}}
+	#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(even) .left .icon{color:${color1!};border-color:${color1!}}
+	#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(odd) .middle span{color:${color0!};background-color:${color0!}}
+	#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_union_time .navigation ul li:nth-child(even) .middle span{color:${color1!};background-color:${color1!}}
+	
+[/@web_style]
+<div class="sq_union_time">
+    <div class="title"><div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text">发展历程</div></div>
+    <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"><div class="siteblocks-header-banner">
+            <ul>
+                [@gallery photos="${photo_ids!}" showAllFlag=true]
+                    [#if gallery_data?? || (gallery_data?size)>0]
+                        [#list gallery_data as photo]
+                            <li>
+                               [#if (photo_index%2)==0]
+                                <div class="left">
+                                    	<div class="inTitle" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>[#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']<span title="" class="banner_name">${photo.trans_photoAlt!?html}</span>[/#if] <span class="icon" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}', 'border-color':'colorVal-0-${color0!}'}"[/@web_backend]><i iconclass="fa-angle-down" class="fa fa-angle-down" style="font-size:22px;"></i></span></div>
+                                         [#if photo.linkJson?? && photo.linkJson!='']<a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>[/#if]
+                                        <picture class="showFalse pictureC">
+                                            <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                                            <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                                                <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                                        </picture>
+                                        [#if photo.linkJson?? && photo.linkJson!='']</a>[/#if]
+                                    </div>
+                                <div class="middle"><span class="span" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}', 'background-color':'colorVal-0-${color0!}'}"[/@web_backend]></span></div>
+                                <div class="right showFalse">
+                                	[#if photo.trans_descJson?? && photo.trans_descJson!='']<div class="banner-docs">${photo.trans_descJson!}</div>[/#if]
+                                </div>
+                                    [#elseif (photo_index%2)==1]
+                                <div class="left">
+                                    	<div class="inTitle" [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]>[#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']<span title="" class="banner_name">${photo.trans_photoAlt!?html}</span>[/#if] <span class="icon" [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}', 'border-color':'colorVal-1-${color1!}'}"[/@web_backend]><i iconclass="fa-angle-down" class="fa fa-angle-down" style="font-size:22px;"></i></span></div>
+                                         [#if photo.linkJson?? && photo.linkJson!='']<a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>[/#if]
+                                        <picture class="showFalse pictureC">
+                                            <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                                            <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                                                <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                                        </picture>
+                                        [#if photo.linkJson?? && photo.linkJson!='']</a>[/#if]
+                                    </div>
+                                <div class="middle"><span class="span" [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}', 'background-color':'colorVal-1-${color1!}'}"[/@web_backend]></span></div>
+                                <div class="right showFalse">
+                                	[#if photo.trans_descJson?? && photo.trans_descJson!='']<div class="banner-docs">${photo.trans_descJson!}</div>[/#if]
+                                </div>
+                                    [/#if]
+                            </li>
+                        [/#list]
+                    [#elseif (gallery_data?size)==0]
+                        no data.
+                    [/#if]
+                [/@gallery]
+            </ul>
+        </div>
+        [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+        $(function(){
+        window._block_namespaces_['sq_union_time'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+        });
+        [/@web_javascript]</div>
+</div>

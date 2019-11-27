@@ -1,0 +1,68 @@
+[#assign color0 = '#C02922']
+[#assign color1 = '#f3f3f3']
+[#assign color2 = '#ffffff']
+ [#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+    [#if componentBlock.blockStyleClass.colorVal1?? ]
+        [#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+    [/#if]
+   [#if componentBlock.blockStyleClass.colorVal2?? ]
+        [#assign color2 = componentBlock.blockStyleClass.colorVal2 /]
+    [/#if]
+[/#if]
+ [@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .img_boxBackgroud{background-color:${color1!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .preAndNext .slick-prev-qk{color: ${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .preAndNext .slick-next-qk{color: ${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .preAndNext .slick-prev-qk:hover{background-color:${color0!};color: ${color2!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .preAndNext .slick-next-qk:hover{background-color:${color0!};color: ${color2!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .button  .asetting{background-color:${color0!};box-shadow: 0 3px 10px 0 rgb(0, 0, 0, .3); }
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .lineTop{background-color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .indexbox_201911041156 .lineBottom{background-color:${color0!};}
+[/@web_style]
+
+<div class="indexbox_201911041156">
+    <div class="container">
+        <div class="row">
+            <div class="col_lg_18 col_sm_24">
+             
+                    
+         <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"></div>
+                    
+                    
+              
+				
+				<div class="preAndNext">
+					<div class="slick-prev-qk" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]><i class="fa fa-caret-left rows"></i></div>
+					<div class="slick-next-qk" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]><i class="fa fa-caret-right rows"></i></div>
+				</div>
+				
+                <div class="img_boxBackgroud"  [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                </div>
+            </div>
+			
+			
+			
+            <div class="col_lg_6 col_sm_24">
+                <div class="col_box text_box">
+                    <h2>
+                        <div class="backstage-blocksEditor-wrap title1" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text"></div>
+                        <div class="backstage-blocksEditor-wrap title2" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text"></div>
+                    </h2>
+                    <div class="text">
+                        <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text"></div>
+                    </div>
+                    <div class="button">
+                        <div class="lineTop">
+                        </div>
+                        <div class="backstage-blocksEditor-wrap asetting" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend] data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_button"></div>
+                        <div class="lineBottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

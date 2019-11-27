@@ -1,0 +1,35 @@
+[@table_select serviceName="phoenixSaleService" pageNum="${pageNum!'1'}" useFlag='1']
+		[#if couponList??]
+		[#list couponList as coupon]
+		<div class='couponWrap [#if coupon.couponType?? && coupon.couponType=="0"]cash[#else]discount[/#if]'>
+			<div class='couponHeader'>
+				<div class="couponImgWrap">[#if coupon.couponType?? && coupon.couponType=="0"][@web_image pid="29367581" pname="cash.png" width="" height=""/][#else][@web_image pid="29367681" pname="discount.png" width="" height=""/][/#if]</div>
+				<div class="couponNum">
+					[#if coupon.couponType?? && coupon.couponType=="0"]
+					<div>$<span class="calcMoney ml5">${coupon.discountNum!''}</span></div>
+					[#else]
+					<div><span class="calcMoney mr5">${coupon.discountNum!''}</span>%</div>
+					[/#if]
+					<div class="termWrap mt10">
+						[#if coupon.useCondition??]
+						Full $<span>${coupon.useCondition!''}</span>
+						[/#if] 
+					</div>    
+				</div>
+				<div class="couponDate"><span>${coupon.validityStartStr!''}</span>~<span>${coupon.validityEndStr!''}</span></div>
+			</div>
+			<div class="couponCode"><span style="font-weight:bold">Coupon Code:</span> ${coupon.couponCode!''}</div>
+			<div class="gotoUse"><a href="${coupon.goToUseUrl!'javascript:void(0);'}">Go to use</a></div>
+		</div>
+		[/#list]
+         <div class="sitewidget-ft">
+         	<div class="fix">
+        	 [@pagination href="javascript:void(0)" jumpFlag="0" pageSize="20" pageClass="pagination pagination-sm flr" totalRecord="${totalCount!0}" currentPage="${(pageNum!1)?number}" settingId="${settingId!''}" pageAjax="0" ajaxFunctionName="jumpCouponPageNum" ajaxParam="coupon_used||couponAlreadyUsed"/]
+			</div>
+		</div>
+		[#else]
+         <div class="couponNone">
+         [@web_image pid="29551491" pname="优惠券为空.jpg" width="" height=""/]
+		</div>
+	[/#if]
+[/@table_select]

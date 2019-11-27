@@ -1,0 +1,61 @@
+[#assign color0 = '#2091C6']
+
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!} .siteblocks-container{
+background: #F0F3F6;
+}
+.blockquote__20190924 .blockquote__item--icon span {
+  color: ${color0!};
+}
+.blockquote__20190924 .blockquote__scrollbar--wrapper span {
+ color: ${color0!};
+}
+.blockquote__20190924 .blockquote__scrollbar--front{
+  color: ${color0!};
+}
+[/@web_style]
+
+<div class="blockquote__20190924">
+        <div class="container">
+          <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text"><div class="col-xs-12 blockquote__header">
+            里程碑</div></div>
+        </div>
+          <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-relate-appId="YWfpAKUKNmwO" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"><div class="container blockquote__con">
+            [#if graphicDescs??]
+              [@json json="${graphicDescs!''}" jsonArrayFlag="1" ]
+                  [#list result as jsonObject]
+                  <div class="col-xs-6 col-sm-3 blockquote__item">
+                    <h1 class="blockquote__item--icon"><span [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}" [/@web_backend]></span></h1>
+                    <h1 class="blockquote__item--title">${jsonObject.title!''}</h1>
+                    <div class="blockquote__item--con">
+                      ${jsonObject.cont!''}
+                    </div>
+                  </div>
+                  [/#list]
+              [/@json]
+            [#else]
+              <p>[@s.m "phoenix_no_content" /]</p>
+            [/#if]
+            </div>
+            [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+$(function(){
+        window._block_namespaces_['blockquote2019092401'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+        });
+[/@web_javascript]</div>
+        
+          
+        <div class="container">
+          <div class="blockquote__scrollbar--wrapper">
+            <span class="arrow-left" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}" [/@web_backend]></span>
+            <span class="arrow-right" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}" [/@web_backend]></span>
+            <div class="blockquote__scrollbar">
+              <div class="blockquote__scrollbar--front" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}" [/@web_backend]></div>
+            </div>
+          </div>
+        </div>
+      </div>

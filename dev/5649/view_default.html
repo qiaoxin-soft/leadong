@@ -1,0 +1,82 @@
+[#assign color0 = '#c02922']
+[#if componentBlock.blockStyleClass??]
+    [#if componentBlock.blockStyleClass.colorVal0?? ]
+        [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+    [/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!} .siteblocks-container{
+			background-image: url('//a3.leadongcdn.cn/cloud/moBqjKlqRipSpolpmmjm/background.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .xyx-2019-9-27-zhygqk-HONDA-CBR650R .text-box .default-line{ border-color:${color0!};}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item.activity .img-dos:before{background:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item.activity .img-dos{border-color:${color0!};}
+[/@web_style]
+[@web_backend]
+<div class="backstage-tip" style="text-align:center;color:#999;">【注：本区块请添加三张以上图片】</div>
+[/@web_backend]
+[@web_backend]<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"></i> [/@web_backend]
+<div class="xyx-2019-9-27-zhygqk-HONDA-CBR650R">
+    <div class="text-box">
+        <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text"><div class="default-p1">PRODUCTS</div>
+            <div class="default-line" [@web_backend]data-blocksetting-color="{'border-color':'colorVal-0-${color0!}'}"[/@web_backend]>&nbsp;</div>
+            <div class="default-p2">This area can be fully edited and gives you the opportunity</div></div>
+    </div>
+    <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"><div class="siteblocks-header-banner">
+        <div class="img-ul-box">
+            <ul class="img-list">
+                [@gallery photos="${photo_ids!}" showAllFlag=true]
+                [#if gallery_data?? || (gallery_data?size)>0]
+                [#list gallery_data as photo]
+                <li class="img-tiem" data-pos="4">
+                    [#if photo.linkJson?? && photo.linkJson!='']<a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>[/#if]
+                    <picture>
+                        <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                        <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                        <img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                    </picture>
+                    [#if photo.linkJson?? && photo.linkJson!='']</a>[/#if]
+                    <div class="img-container">
+                        [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']<div class="banner-name">${photo.trans_photoAlt!?html}</div>[/#if]
+                        [#if photo.trans_descJson?? && photo.trans_descJson!='']<div class="banner-docs">${photo.trans_descJson!}</div>[/#if]
+                    </div>
+                </li>
+                [/#list]
+                [#elseif (gallery_data?size)==0]
+                no data.
+                [/#if]
+                [/@gallery]
+            </ul>
+            <input class="btn-l" type="button" />
+            <input class="btn-r" type="button"  />
+        </div>
+        <div class="carousel-line">
+            <ul class="carousel-line-in">
+            	[@gallery photos="${photo_ids!}" showAllFlag=true]
+				[#if gallery_data?? || (gallery_data?size)>0]
+					[#list gallery_data as photo]
+						<li class="description-item" data-index="${photo_index}">
+                            <div class="img-dos"></div>
+	             			<div class="img-description">
+	                            <div class="img-container">
+	                                [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']<div class="banner-name">${photo.trans_photoAlt!?html}</div>[/#if]
+	                                [#if photo.trans_descJson?? && photo.trans_descJson!='']<div class="banner-docs">${photo.trans_descJson!}</div>[/#if]
+	                            </div>
+	                        </div>
+						</li>
+					[/#list]
+				[#elseif (gallery_data?size)==0]
+	            	no data.
+				[/#if]
+			[/@gallery]
+            </ul>
+        </div>
+        </div>
+        [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+        $(function(){
+        window._block_namespaces_['iofUpKAfFbZz1'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+        });
+        [/@web_javascript]</div></div>

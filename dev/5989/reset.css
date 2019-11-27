@@ -1,0 +1,127 @@
+<style>@charset "utf_8";
+
+.indexbox_201911041156 {
+    margin: 0px;
+}
+
+.indexbox_201911041156 ol, ul {
+    list-style: none;
+}
+
+
+.indexbox_201911041156 img {
+    max-width: 100%;
+}
+
+
+.indexbox_201911041156 .img_box {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.indexbox_201911041156 a {
+    opacity: 1;
+    text-decoration: none;
+    transition: all .3s
+}
+
+.indexbox_201911041156 .overflow {
+    overflow: hidden;
+}
+
+
+/*frame*/
+.indexbox_201911041156 .container {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.indexbox_201911041156 .container_1200 {
+    width: 1200px;
+    margin: auto;
+}
+.indexbox_201911041156 .container_1600 {
+    width: 1600px;
+    margin: auto;
+    overflow: hidden;
+    transition: all .4s;
+}
+
+.indexbox_201911041156 .row {
+    margin-right: -10px;
+    margin-left: -10px;
+    *margin-right: 0px;
+    *margin-left: 0px;
+}
+
+.indexbox_201911041156 .col_box {
+    *margin-left: 10px;
+    *margin-right: 10px;
+}
+
+.indexbox_201911041156 .container:before,
+.indexbox_201911041156 .container:after,
+.indexbox_201911041156 .container_1200:before,
+.indexbox_201911041156 .container_1200:after,
+.indexbox_201911041156 .row:before,
+.indexbox_201911041156 .row:after {
+    display: table;
+    content: " ";
+
+}
+
+.indexbox_201911041156 .container:after,
+.indexbox_201911041156 .container_1200:after,
+.indexbox_201911041156 .row:after {
+    clear: both;
+}
+
+.indexbox_201911041156 *:before,
+.indexbox_201911041156 *:after,
+.indexbox_201911041156 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+.indexbox_201911041156 .col_lg_6,.col_lg_8,.col_sm_24
+{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    *padding-right: 0px;
+    *padding-left: 0px;float: left;
+}
+
+
+.indexbox_201911041156 .col_lg_18 {
+    width: 50%;
+}
+
+.indexbox_201911041156 .col_lg_8 {
+    width: 100%;
+}
+
+.indexbox_201911041156 .col_lg_8 img{
+    width:480px;
+	height:100%;
+}
+
+.indexbox_201911041156 .col_lg_8 .videoStyle{
+ 
+	height:370px;   
+}
+
+
+.indexbox_201911041156 .col_lg_6 {
+    width: 50%;
+}
+.backstage-body-canvas .siteblocks-setting-wrap .rowsOpts .backstage-container-color.on .siteblocks-setting-operateColor{
+        box-sizing: content-box;
+    }
+.backstage-body-canvas .siteblocks-setting-wrap .rowsOpts .ctner-background-btns.on .siteblocks-setting-operateBackground{box-sizing: content-box;}</style>

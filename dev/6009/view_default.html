@@ -1,0 +1,61 @@
+[#assign color0 = '#C02922']
+
+[#if componentBlock.blockStyleClass??]
+  [#if componentBlock.blockStyleClass.colorVal0?? ]
+    [#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+  [/#if]
+[/#if]
+
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!} .siteblocks-container{
+
+}
+.blockquote__20191106 .item_box {
+  color: ${color0!};
+}
+[/@web_style]
+      <div class="blockquote__20191106">
+<div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="YpfUKAUKDeHE" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" class="siteblocks-header-banner"><div class="container-fluid">
+        <div class="item_box" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}" [/@web_backend]>
+           <div class="item_box_icon_left"><span></span></div>
+           <div class="item_box_icon_right"><span></span></div>
+          <div class="item_box_con">
+          [@gallery photos="${photo_ids!}" showAllFlag=true]
+            [#if gallery_data?? || (gallery_data?size)>0]
+              [#list gallery_data as photo]
+          <div class="item">
+            <div class="item__bg">
+                <img class="[#if photo_index == 0]active[/#if]" src="${photo.additionalPhotoUrl!}" alt="${photo.trans_photoAlt!?html}">
+            </div>
+            <div class="item__right">
+              <div class="item__img-wrap">
+                  <div class="img"><img class="[#if photo_index == 0]active[/#if]" src="${photo.photoUrl!}" alt="${photo.trans_photoAlt!?html}"></div>
+                <div class="item__right-text">
+                  <p><em>0${photo_index + 1}</em><span>&nbsp;</span><em>/0${gallery_data?size}</em></p>
+                </div>
+              </div>
+            </div>
+            <div class="item__left">
+              <div class="item__left-bg">
+                <img class="[#if photo_index == 0]active[/#if]" src="${photo.additionalPhotoUrl!}">
+              </div>
+              <div class="item__left-con">
+                <h1>${photo.trans_photoAlt!?html}</h1>
+                <p>${photo.trans_descJson!}</p>
+                <a [#if photo.linkJson?? && photo.linkJson!=''][@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl][/#if]><span>[@s.m "VvfUKpAAlKUo_ToKnowMore" /]</span></a>
+              </div>
+            </div>
+          </div>
+          [/#list]
+            [#elseif (gallery_data?size)==0] no data. 
+            [/#if] 
+          [/@gallery]
+        </div>
+            </div>
+      </div>
+[@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+			    $(function(){
+						window._block_namespaces_['blockquote20191106'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+						});
+			[/@web_javascript]</div>
+      </div>

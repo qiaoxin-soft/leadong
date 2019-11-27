@@ -1,0 +1,76 @@
+[#assign color0 = '#1872BF']
+[#assign color1 = '#F1F6FA']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_text_img_change .panel i.fa:hover{background:${color0!}}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_text_img_change .wrapC .innerC .tit{color:${color0!}}
+ 	#siteblocks-setting-wrap-${componentBlock.settingId!} .sq_text_img_change .wrapC {height:0px;background:${color1!}}
+     #siteblocks-setting-wrap-${componentBlock.settingId!} .sq_text_img_change .wrapC:before{background:inherit}
+[/@web_style]
+<div class="sq_text_img_change">
+    <i  [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]></i>
+    <div class="wrap">
+    	<div class="left_img">
+        <div class="content">
+            <div class="inner">
+                <div class="text1">
+                    <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text">PRODUCT</div>
+                </div>
+                <div class="text2">
+                    <div class="backstage-blocksEditor-wrap" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text">NEW ARRIVAL</div>
+                </div>
+                 <div class="text3">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="changeTab">
+       		<i iconclass="fa-angle-left" class="fa fa-angle-left" style="font-size:28px;"></i>
+            <i iconclass="fa-angle-right" class="fa fa-angle-right" style="font-size:28px;"></i>
+        </div>
+    </div>
+        <div class="imgAll">
+        <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="MTAUpfKKKLVg" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"><div class="siteblocks-header-banner">
+		<ul class="slick">
+	    	[@gallery photos="${photo_ids!}" showAllFlag=true]
+				[#if gallery_data?? || (gallery_data?size)>0]
+					[#list gallery_data as photo]
+						<li tit="${photo.trans_photoAlt!?html}" des="${photo.trans_descJson!}">
+							[#if photo.linkJson?? && photo.linkJson!='']<a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>[/#if]
+							<picture>
+								<source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+								<source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+									<img src="[@pic_url src='${photo.photoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+							</picture>
+							[#if photo.linkJson?? && photo.linkJson!='']</a>[/#if]
+                            <div class="hideC"><span class="hide1"></span><span class="hide2"></span><div>
+						</div></div></li>
+					[/#list]
+				[#elseif (gallery_data?size)==0]
+	            	no data.
+				[/#if]
+			[/@gallery]
+		</ul>
+	</div>
+        [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+        $(function(){
+        window._block_namespaces_['sq_text_img_change'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+        });
+        [/@web_javascript]</div></div>
+    </div>
+    <div class="wrapC" [@web_backend]data-blocksetting-color="{'background':'colorVal-1-${color1!}'}"[/@web_backend]>
+        <div class="innerC">
+        	<div class="tit" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>Specialized in product & Expertise in type</div>
+        	<div class="des">This area can be fully edited and gives you the opportunity to introduce yourself, your website, your products or your services.</div>
+        </div>
+    </div>
+</div>

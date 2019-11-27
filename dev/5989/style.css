@@ -1,0 +1,185 @@
+<style>.indexbox_201911041156 .no_padding {
+  padding: 0;width:500px;z-index:2
+}
+
+.indexbox_201911041156 .line {
+  width: 100%;
+  height: 1px;
+  background: #d2d2d2;
+}
+
+
+.indexbox_201911041156{
+  padding: 20px 0 20px;
+}
+
+.indexbox_201911041156 .text_box{
+  margin-top: 60px;
+}
+
+.indexbox_201911041156 .text_box h3{
+  font-size: 18px;
+  color: #212121;
+  position: relative;
+  padding-left: 115px;
+}
+.indexbox_201911041156 .text_box h3:before{
+  position: absolute;
+  content: '';
+  width: 110px;
+  height: 2px;
+  background: #3D80AB;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+}
+.indexbox_201911041156 .text_box h2 .title1{
+          display: -webkit-box;
+-webkit-box-orient: vertical;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #C02922;
+   overflow: hidden;
+text-overflow:ellipsis;
+letter-spacing:2.5px;white-space:nowrap;
+   -webkit-line-clamp: 1;
+}
+.indexbox_201911041156 .text_box h2 .title2{
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+  font-weight: normal;white-space:nowrap;
+  font-size: 36px;
+  color: #333333;
+  text-transform: none;
+overflow: hidden;
+text-overflow:ellipsis;
+margin:12px 0px 0 0;
+-webkit-line-clamp: 1;
+}
+
+.indexbox_201911041156 .text{
+margin:19px 0px 66px 0px;
+   display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow:ellipsis;
+-webkit-line-clamp: 4;
+font-size: 14px;
+color: #333333;
+font-weight: 300;
+}
+
+
+.indexbox_201911041156 .button{
+text-align: center;
+display: inline-block;
+position:relative
+}
+
+
+.indexbox_201911041156 .button a{
+padding:20px 50px;
+text-align: center;
+display: inline-block;
+overflow: hidden;
+text-overflow:ellipsis;
+font-size: 16px;
+color: #fff;
+text-decoration:none;
+}
+
+.indexbox_201911041156 .button .asetting{
+margin: 20px 0px;height: 61px;
+}
+  
+  
+.indexbox_201911041156 .button a:hover{
+
+}
+
+.indexbox_201911041156 .lineTop{
+height:1px;background:#C02922;width:0px;	transition: width 1s;
+-moz-transition: width 0.5s; /* Firefox 4 */
+-webkit-transition: width 0.5s; /* Safari 和 Chrome */
+-o-transition: width 0.5s; /* Opera */
+}
+
+.indexbox_201911041156 .lineBottom{
+height:1px;background:#C02922;width:0px;position:absolute;right:0px;	transition: width 1s;
+-moz-transition: width 0.5s; /* Firefox 4 */
+-webkit-transition: width 0.5s; /* Safari 和 Chrome */
+-o-transition: width 0.5s; /* Opera */
+}
+
+.indexbox_201911041156 .img_box{
+  margin-bottom: 0px;
+  position: relative;
+  top: 0;
+  transition: all .3s;z-index:2;
+}
+
+.indexbox_201911041156 .img{
+  line-height: 0;
+  text-align: center;
+}
+
+.indexbox_201911041156 .img img{
+  width: 100%;
+}
+
+.indexbox_201911041156 .img_box span{
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: #0d0d0d;
+  background: #edeced;
+  padding: 20px 0;
+}
+
+.indexbox_201911041156 .img_boxBackgroud{
+width:220px;height:390px;background:#f3f3f3;position: absolute;top: 60px;left: 351px;
+}
+
+.indexbox_201911041156 .img_box:hover{
+/*  top: -10px;
+  transition: all .3s;
+*/
+}
+
+.indexbox_201911041156 .preAndNext{
+height: 40px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+margin:35px 0px 25px 10px
+}
+
+.indexbox_201911041156 .preAndNext .slick-prev-qk, .slick-next-qk {
+  display: inline-flex;
+  height: 40px;
+align-items:center;justify-content:center;
+  width: 40px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: 1px solid #A0A0A0;text-align: center;color:#C02922;
+}
+
+
+.indexbox_201911041156 .slick-next-qk {
+  margin-left: 10px;
+}
+
+.indexbox_201911041156 .preAndNext .slick-prev-qk:hover, .slick-next-qk:hover{
+
+  border: 0px;background:#C02922;color:#fff;
+ 
+}
+
+.indexbox_201911041156 .preAndNext .rows{
+
+font-size:32px;
+ 
+}</style>

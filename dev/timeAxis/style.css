@@ -1,0 +1,204 @@
+<style>.blockquote__20190924 {
+  padding-top: 63px;
+}
+
+.blockquote__20190924 div[class^="col-"] {
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.blockquote__20190924 .blockquote__header {
+  font-size: 30px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.blockquote__20190924 .blockquote__con {
+  /* padding-bottom: 40px; */
+  background-image: linear-gradient(to right, #979797, #979797 5px, #FFF 2px);
+  background-repeat: repeat-x;
+  background-size: 7px 1px;
+      background-position: 0 59px;
+padding: 50px 0 40px;
+  background-color:#fff;
+      margin: 30px auto;
+}
+
+.blockquote__20190924 .blockquote__item--icon {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.blockquote__20190924 .blockquote__item--icon span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  color: #2091C6;
+  border: 2px solid;
+  position: relative;
+}
+
+.blockquote__20190924 .blockquote__item--icon span::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentcolor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blockquote__20190924 .blockquote__item--title {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 20px;
+  color: #333;
+}
+
+.blockquote__20190924 .blockquote__item--con {
+  margin: 0;
+  margin-top: 12px;
+  padding: 0;
+  min-height: 150px;
+  line-height: 25px;
+  font-size: 18px;
+  color: #333333;
+  word-break: break-word;
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper {
+  margin-bottom: 82px;
+  position: relative;
+  /* padding: 0 5%; */
+  /* height: 2px; */
+  /* background-color: #8D8D8D; */
+  /* background-image: linear-gradient(to right, #8d8d8d, #8d8d8d); */
+  /* background-size: 92% 100%; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2091C6;
+  background-color: #8D8D8D;
+  text-align: center;
+  cursor: pointer;
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper span:hover {
+  
+  background-color: currentcolor;
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper .arrow-left {
+  left: 0;
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper .arrow-right {
+  right: 0;
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper .arrow-left:before {
+  content: '←';
+  font-size: 13px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blockquote__20190924 .blockquote__scrollbar--wrapper .arrow-right:before {
+  content: '→';
+  font-size: 13px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blockquote__20190924 .blockquote__scrollbar {
+  /* margin-bottom: 82px; */
+  position: absolute;
+  height: 2px;
+  width: 90%;
+  left: 5%;
+  /* background-color: #8D8D8D; */
+  background-image: linear-gradient(to right, #8d8d8d, #8d8d8d);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .blockquote__20190924 .blockquote__scrollbar::after { */
+.blockquote__20190924 .blockquote__scrollbar--front {
+  /* margin: 0 4%; */
+  position: absolute;
+  height: 4px;
+  /* left: 10%; */
+  /* right: 10%; */
+  width: 100%;
+  /* left: 10%; */
+  color: #007BFF;
+  left: 0;
+  top: -1px;
+  border-radius: 2px;
+  background-color: currentcolor;
+  transition: all .3s;
+}
+
+
+
+@media (max-width: 767.98px) {
+  .blockquote__20190924 {
+    padding-top: 74px;
+  }
+
+  .blockquote__20190924 div[class^="col-"] {
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  .blockquote__20190924 .blockquote__header {
+    font-size: 24px;
+    height: 33px;
+    line-height: 33px;
+  }
+
+  .blockquote__20190924 .blockquote__item--title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  .blockquote__20190924 .blockquote__item--con {
+    margin-top: 4px;
+  min-height:120px;
+  }
+
+  .blockquote__20190924 .blockquote__scrollbar {
+    margin-bottom: 120px;
+  width: 80%;
+    left: 10%;
+  }
+
+}</style>

@@ -1,0 +1,216 @@
+<style>.xyx-2019-9-27-zhygqk-HONDA-CBR650R{
+  padding-top:20px;
+}
+    .xyx-2019-9-27-zhygqk-HONDA-CBR650R .banner-docs{
+            display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+                    font-size: 14px;
+    }
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R  .text-box .default-p1{
+  font-size: 44px;
+  color: #000000;
+  text-align: center;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .text-box .default-line{
+  width:80px;
+  border-bottom: 8px solid #C02922;
+  margin: 0px auto 20px;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R  .text-box .default-p2{
+  text-align: center;
+  opacity: 0.6;
+  font-size: 20px;
+  color: #000000;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-ul-box{
+  position: relative;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R	.img-list {
+  position: relative;
+  transform-style: preserve-3d;
+  height: 500px;
+        perspective: 2000px;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem {
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  transition: 1s;
+  opacity: 0;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-l,
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-r{
+  position: absolute;
+  top: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-l{
+  left: 25%;
+  background: url(//a3.leadongcdn.cn/cloud/mlBqpKirRipSlnlonjjq/left.png) 0 no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-r{
+  right: 25%;
+  background:url(//a3.leadongcdn.cn/cloud/mnBqpKirRipSlnloojjq/right.png) 0 no-repeat;
+  background-size: contain;
+  transform: translate(50%, -50%);
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem[data-pos="1"] {
+  top: 50%;
+  left: 25%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+}
+
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R	.img-tiem[data-pos="2"] {
+  top: 58%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 800px);
+  opacity: 1;
+  z-index:2;
+}
+
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R	.img-tiem[data-pos="3"] {
+  top: 50%;
+  left: 75%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 1;
+}
+
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R	.img-tiem[data-pos="4"] {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, -800px);
+  opacity: 0;
+}
+
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R	.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .carousel-line{
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+  height: 206px;
+  overflow: hidden;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-dos:before{
+  width: 16px;
+  height: 16px;
+  background-color: #C2C2C2;
+  border-radius: 50%;
+  cursor: pointer;
+    transform: translate(-50%, -50%);
+    display: block;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .carousel-line-in{
+  display: flex;
+  font-size: 20px;
+  color: #999999;
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #979797;
+  top: 20px;
+  transition: all 1s;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-description{
+  margin: 20px auto;
+        word-break: break-word;
+        text-align: center;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item{
+  width: 240px;
+        cursor:pointer;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item.activity .img-dos:before{
+  background: #C02922;         
+}
+    .xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item .img-dos{
+        position: relative;
+        width:30px;
+        height:30px;
+        top: -15px;
+    box-sizing: border-box;
+    border-radius: 50%;
+        left: 50%;
+    margin-left: -15px;
+                    }
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item.activity .img-dos{
+            border: 1px solid #ccc;
+    background-color: #ddd;
+}
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .description-item.activity .banner-name{
+  font-size: 20px;
+  color: #000000;
+}
+    .xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem .img-container{
+        display:none;
+    }
+@media (max-width: 1180px) {
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .carousel-line{
+  width: 100%;
+}
+}
+  @media (max-width: 768px) {
+.xyx-2019-9-27-zhygqk-HONDA-CBR650R .carousel-line{
+ display:none;
+}
+  .xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem[data-pos="1"],.xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem[data-pos="3"]{
+      opacity:0;
+  }
+ .xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem[data-pos="2"] {
+              transform: translate3d(-50%,-50%,0);
+            top: 40%;
+ }
+  .xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-list{
+                      height:400px;
+  }
+ .xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-l, .xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-r{
+        width:30px;
+        height:30px;
+ }
+ .xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-l{left:10%;}
+ .xyx-2019-9-27-zhygqk-HONDA-CBR650R .btn-r{right:10%;}
+ .xyx-2019-9-27-zhygqk-HONDA-CBR650R .img-tiem .img-container{
+   text-align: center;
+   font-size:14px;
+   margin-top: 10px;
+        display:block;
+        word-break: break-word;
+ }
+}
+    @media (max-width: 700px) {
+    .xyx-2019-9-27-zhygqk-HONDA-CBR650R .text-box .default-p1{
+    font-size:28px;
+                }
+                .xyx-2019-9-27-zhygqk-HONDA-CBR650R .text-box .default-p2{
+    font-size:14px;
+                            }
+}
+    @media (max-width: 400px) {
+    .xyx-2019-9-27-zhygqk-HONDA-CBR650R .text-box .default-p1{
+    font-size:24px;
+                }
+}</style>
