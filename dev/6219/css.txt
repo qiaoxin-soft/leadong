@@ -1,0 +1,142 @@
+<style>.QX-11226219{
+        max-width:1190px;
+        padding:5px;
+        margin:auto;
+    }
+    .QX-11226219 .wrapper{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .QX-11226219 .tile{
+        position:relative;
+        width:calc(20% - 10px);
+        margin: 5px;
+        overflow: hidden;
+    }
+    .QX-11226219 .imgBox{
+        width:100%;
+        height:228px;
+    }
+    .QX-11226219 .imgBox img{
+        height:100%;
+        width:100%;
+        object-fit:cover;
+        object-position:center;
+    }
+    .QX-11226219 .textBox{
+        position: absolute;
+        left: 0;
+        top: -100%;
+        width:100%;
+        height: 228px;
+        opacity: 0.8;
+     
+    }
+    .QX-11226219 .containBox{
+        padding: 45px 10px;
+        width: calc(100% - 20px);
+    }
+    .QX-11226219    .nameBox{
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: bold;
+            cursor: pointer;
+    }
+    .QX-11226219 .line{
+        width: 100%;
+        border: solid 0.5px;
+        margin: 15px 0;
+    }
+    .QX-11226219 .docsBox{
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+        word-break: break-word;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .QX-11226219 .moreBtn{
+        display:none;
+    }
+@media screen and (max-width:1205px){
+        .QX-11226219 .imgBox {
+                    width: 100%;
+                    height: 200px;
+                }
+                .QX-11226219 .textBox{
+            height: 200px;
+        }
+        .QX-11226219 .containBox{
+        padding: 30px 10px;
+                }
+    }
+    @media screen and (max-width:878px){
+        .QX-11226219 .imgBox {
+                    width: 100%;
+                    height: 150px;
+                }
+                .QX-11226219 .textBox{
+            height: 150px;
+        }
+        .QX-11226219 .containBox{
+    padding-top: 10px;
+                }
+                
+                .QX-11226219 .line {
+            margin: 5px 0;
+                        }   
+    }
+
+    @media screen and (max-width:550px){
+        .QX-11226219 .tile:nth-of-type(3n) .line{
+         display:none;
+                    }
+        .QX-11226219{
+                padding:0;
+                margin: 10px 0;
+            }
+            .QX-11226219 .tile{
+        width:33.3%;
+        margin:0;
+    }
+    .QX-11226219 .imgBox{
+        height:118px;
+    }
+    .QX-11226219 .textBox{
+        width:100%;
+        height:111px;
+        opacity: 1;
+        top:100%;
+        position: unset;
+        text-align:center;
+    }
+    .QX-11226219 .containBox{
+        width: calc(100% - 10px);
+        padding: 20px 5px;
+    }
+    .QX-11226219   .nameBox{
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+    }
+    .QX-11226219 .docsBox{
+        font-size: 11px;
+        line-height: 15px;
+        -webkit-line-clamp: 3;
+        margin-top: 10px;
+    }
+    .QX-11226219 .line{
+        position: absolute;
+        width: 0;
+        height: 228px;
+        top: 0;
+        margin: 0;
+        right:0;
+    }
+}</style>
