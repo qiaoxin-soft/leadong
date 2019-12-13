@@ -1,0 +1,42 @@
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "qukuai6239";
+        var qukuai6239 = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                    );
+        $.extend(qukuai6239, {
+            "init": init
+        }
+                )
+        function init(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+
+                var $slick = $selector.find(".QX-11226239 .wrapper").slick({
+                    lazyLoad: 'ondemand',
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+               responsive: [
+                    {
+                        breakpoint: 501,
+                        settings: {
+                        slidesToShow: 1,
+                    slidesToScroll: 1,
+                        }
+                    }
+                ]
+            }
+                                                                                     );
+            
+            
+            
+
+
+        }
+    }
+    )(window, jQuery);</script>

@@ -1,0 +1,35 @@
+
+
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "qukuai6289";
+        var qukuai6289 = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                  );
+        $.extend(qukuai6289, {
+            "init": innit
+        }
+                )
+        function innit(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+          
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+           $(".QX-11296289 .Article_Container .w_wrapper .w_item .w_image .image[alt = 'no photo']").css("opacity","0");
+           $(".QX-11296289 .Article_Container .w_wrapper .w_item").each(function(){
+                var alt = $(this).find("img").attr("alt");
+                if(alt == "no photo"){
+                   $(this).css("background","#fff");
+                    $(this).children('.w_image').css("opacity","0");
+                    $(this).children('.w_date').css("padding","40px");
+                    $(this).children('.w_content').css({"opacity":"1","transform":"translateY(-50px)"});
+                 }
+            });
+           
+           
+        }
+    }
+    )(window, jQuery);</script>

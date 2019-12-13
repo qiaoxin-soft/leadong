@@ -1,0 +1,64 @@
+[#assign color0 = 'rgb(109, 158, 235)']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[/#if]   
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!}   .QX-11226269 .wrapper .tile .mask{ background-color:${color0!}}
+[/@web_style]
+<div class="${componentBlock.containerOpenState!''}" data-container-openstate="true">
+    <div id="location_${settingId!}">
+        <div class="QX-11226269">
+            <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="YpfUKAUKDeHE" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=f2365239-4a62-4e54-b9db-b52f553d3ffe><div class="siteblocks-header-banner">
+                    <ul class="wrapper">
+                        [@gallery photos="${photo_ids!}" showAllFlag=true]				[#if gallery_data?? || (gallery_data?size)>0]					[#list gallery_data as photo]						
+                        <li class="tile">             
+                            <div class="imgBox">
+                                <source media="(min-width: 450px)" srcset="[@pic_url src='${photo.photoUrl!}' width='1920' height='1920'][/@pic_url]" />
+                                <source media="(max-width: 449px)" srcset="[@pic_url src='${photo.photoUrl!}' width='640' height='640'][/@pic_url]" />
+                                <img  class="top"src="[@pic_url src='${photo.photoUrl!}' width='400' height='500'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                            </div>
+                            <div class="mask"[@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                                <a class="maskBut" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                </a>
+                            </div>
+                            <div class="titleBox">
+                                <a class="maskBut" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                    <img class="bottom"src="[@pic_url src='${photo.additionalPhotoUrl!}' width='200' height='200'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                                </a>
+                                [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                                <div class="banner-name">
+                                    <a class="maskBut" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                        ${photo.trans_photoAlt!?html}     
+                                    </a>
+                                </div>
+                                [/#if]	    
+                            </div>
+                            <div class="banner-description textBox">
+                                <div class="container">
+                                    [#if photo.trans_descJson?? && photo.trans_descJson!='']
+                                    <div class="banner-docs docsBox">
+                                        <a class="maskBut" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                            ${photo.trans_descJson!}
+                                        </a>
+                                    </div>
+                                    [/#if]	             					[#if photo.linkJson?? && photo.linkJson!='']
+                                    <a class="moreBtn" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                        Learn More
+                                    </a>
+                                    [/#if]	                            
+                                </div>
+                            </div>
+                        </li>
+                        [/#list]				[#elseif (gallery_data?size)==0]	            	no data.				[/#if]			[/@gallery]		
+                    </ul>
+                    [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+                    $(function(){
+                    window._block_namespaces_['block6269'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+                    });
+                    [/@web_javascript]
+                </div></div>
+        </div>
+    </div>
+</div>

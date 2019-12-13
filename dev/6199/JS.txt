@@ -1,0 +1,215 @@
+<script>
+    (function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {});
+        var name = "QX11226199";
+        var QX11226199 = _block_namespaces_[name] || (_block_namespaces_[name] = {});
+        $.extend(QX11226199, {
+            "init": init
+        })
+
+        function init(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+            $selector.find(".pagetab1:first-child").addClass("active");
+            //点击事件
+            $selector.find(".bt .pagetab").click(function () {
+                if ($(this).hasClass("active") == true) {} else {
+                    var index = $(this).index();
+                    var tabBox = $(this).parents(".bt").siblings(".bgc");
+                    $(this).addClass("active").siblings().removeClass("active");
+                    tabBox.find(".pagetab1").removeClass("fadeOutLeft").removeClass("fadeInRight");
+                    tabBox.find(".pagetab1.active").addClass("animated fadeOutLeft");
+                    setTimeout(function () {
+                        tabBox.find(".pagetab1.active").removeClass("active");
+                        tabBox.find(".pagetab1").eq(index).addClass("active animated fadeInRight");
+                    }, 250);
+                }
+            });
+        var $slider;
+               function createSlick() {
+                if (!$slider) {
+                    $slider = $('.bt').slick({
+                           lazyLoad: 'ondemand',
+                        infinite: false,
+                         adaptiveHeight: true,
+                    variableWidth: true,
+                        slidesToscroll: 1,
+                         prevArrow: $selector.find(".prevArrow"),
+                    nextArrow: $selector.find(".nextArrow"),
+                    }
+                                                         );
+                }
+            }
+      function removeSlick() {
+                if ($slider) {
+                    $slider.slick('unslick');
+                }
+                $slider = null;
+            }
+            var winWidth0 = $(window).width();
+            console.log(winWidth0);
+            var sumWidth0 = 0;
+            var sumWidth2 = 0;
+            var lis0 = $selector.find(".bt").find("li").length;
+            console.log(lis0);
+            $selector.find(".bt").find("li").each(function () {
+                sumWidth0 += $(this).width() + 42;
+            });
+            sumWidth0 = sumWidth0 - 42;
+            console.log(sumWidth0);
+            if (winWidth0 > 1180) {
+                if (sumWidth0 > 1120) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            //小屏电脑
+            else if (winWidth0 < 1181 && winWidth0 > 1015) {
+                if (sumWidth0 > 993) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            //pad横屏
+            else if (winWidth0 < 1015 && winWidth0 > 767) {
+                if (sumWidth0 > 705) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            //pad竖屏
+            else if (winWidth0 < 767 && winWidth0 > 649) {
+                if (sumWidth0 > 590) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            //手机横屏
+            else if (winWidth0 < 650 && winWidth0 > 510) {
+                if (sumWidth0 > 450) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            //手机竖屏
+            else if (winWidth0 < 510) {
+                $selector.find(".bt").find("li").each(function () {
+                    sumWidth2 += $(this).width() + 10;
+                });
+                sumWidth2 = sumWidth2 - 10;
+                console.log(sumWidth2);
+                if (sumWidth2 > 322 && sumWidth0 > 322) {
+                    createSlick();
+                    $selector.find(".slick-arrow").show();
+                } else {
+                    removeSlick();
+                    $selector.find(".slick-arrow").hide();
+                }
+            }
+            $(window).resize (function () {
+                var winWidth = $(window).width();
+                console.log(winWidth);
+                var sumWidth = 0;
+                var lis = $(".bt").find("li").length;
+                console.log(lis+"次");              
+                $selector.find(".page_tab_tpl .bt").find("li").each(function () {
+                    sumWidth += $(this).width();
+                     console.log(sumWidth);
+                });
+                sumWidth = sumWidth + (lis - 1) * 42;
+                console.log(sumWidth);
+                if (winWidth > 1180) {
+                    if (sumWidth > 1120) {
+                         console.log(155555);
+                        createSlick();
+                         console.log(dapin);
+                        $selector.find(".slick-arrow").show();
+                    } else {
+                        console.log(155556);
+                        removeSlick();
+                        console.log(155557);
+                        $selector.find(".slick-arrow").hide();
+                    }
+                }
+                //小屏电脑
+                else if (winWidth < 1181 && winWidth > 1015) {
+                    if (sumWidth > 964) {
+                        createSlick();
+                        $selector.find(".slick-arrow").show();
+                    } else {
+                        removeSlick();
+                        $selector.find(".slick-arrow").hide();
+                    }
+                }
+                //pad横屏
+                else if (winWidth < 1015 && winWidth > 767) {
+                    if (sumWidth > 705) {
+                        createSlick();
+                        $selector.find(".slick-arrow").show();
+                    } else {
+                        removeSlick();
+                        $selector.find(".slick-arrow").hide();
+                    }
+                }
+                //pad竖屏
+                else if (winWidth < 768 && winWidth > 649) {
+                    if (sumWidth > 590) {
+                        createSlick();
+                        $selector.find(".slick-arrow").show();
+                    } else {
+                        removeSlick();
+                        $selector.find(".slick-arrow").hide();
+                    }
+                }
+                //手机横屏
+                else if (winWidth < 650 && winWidth > 510) {
+                    if (sumWidth > 450) {
+                        createSlick();
+                        $selector.find(".slick-arrow").show();
+              
+                    } else {
+                        removeSlick();
+                        $selector.find(".slick-arrow").hide();
+                    }
+         
+                }
+                //手机竖屏
+                else if (winWidth < 510) {
+                    var sumWidth1 = 0;
+                  
+              $selector.find(".bt").find("li").each(function () {
+                        
+                        sumWidth1 += $(this).width() + 10;
+                    });
+                    sumWidth1 = sumWidth1 - 10;
+                    console.log(sumWidth1);
+                    if (sumWidth1 > 322) {
+                        createSlick();
+                        $selector.find(".slick-arrow").show();
+                    } else {
+                        removeSlick();
+                        console.log(1);
+                        $selector.find(".slick-arrow").hide();
+                    }
+                }
+            });
+        }
+    })(window, jQuery); 
+    </script>

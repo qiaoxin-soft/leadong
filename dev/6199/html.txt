@@ -1,0 +1,70 @@
+[#assign color0 = '#F5A623']
+[#assign color1 = '#F5F5F5']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq  .pagetab.active{background-color:${color0!}} 
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .nr .pagetab1{border-color:${color0!}}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .bt .pagetab:hover{background-color:${color0!}}
+    #siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .bgc {background-color:${color1!}}
+[/@web_style]
+[@web_backend]
+<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}">
+</i>
+[/@web_backend]
+<div class="QX-11226199">
+    <div class="tip">
+        <div class="backstage-blocksEditor-wrap zh_lc" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=75ce22b2-7811-42ac-93d6-9bdd21313d64>公司历程</div>
+        <div class="prevArrow">
+            <i class="font-icon fa fa-angle-left">
+            </i>
+        </div>
+        <div class="nextArrow">
+            <i class="font-icon fa fa-angle-right">
+            </i>
+        </div>
+    </div>
+    <div class="page_tab_tpl">
+        <div class="backstage-blocksEditor-wrap zh_yq" data-wrap-type="1" data-relate-appId="YWfpAKUKNmwO" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=b9fb37d2-b4fd-4e86-9fb6-dc2117d5ba84>[#if graphicDescs??]
+            <ul class="bt">
+                [@json json="${graphicDescs!''}" jsonArrayFlag="1" ]
+                [#list result as jsonObject]
+                <li class="pagetab" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                    <div class="title" >
+                        ${jsonObject.title!''}
+                    </div>
+                </li>
+                [/#list]
+                [/@json]
+            </ul>
+            [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+            $(function(){
+            window._block_namespaces_['QX11226199'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+            });
+            [/@web_javascript]
+            <div class="bgc" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                <ul class="nr">
+                    [@json json="${graphicDescs!''}" jsonArrayFlag="1" ]
+                    [#list result as jsonObject]
+                    <li class="pagetab1" [@web_backend]data-blocksetting-color="{'border-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                        <div class="cont">
+                            ${jsonObject.cont!''}
+                        </div>
+                    </li>
+                    [/#list]
+                    [/@json]
+                </ul>
+                [#else]
+                <p>
+                    [@s.m "phoenix_no_content" /]
+                </p>
+                [/#if]
+            </div></div>
+    </div>
+</div>

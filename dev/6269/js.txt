@@ -1,0 +1,37 @@
+
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "block6269";
+        var block6269 = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                    );
+        $.extend(block6269, {
+            "init": init
+        }
+                )
+        function init(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+            // ºóÐø´úÂë
+            $selector.find(".QX-11226269 .tile").on("mouseover mouseout",function(e){
+                $(this).each(function(index){
+                    var $Height = $(this).eq(index).find(".textBox").height();
+                    var docsHeight = $Height+20+'px';
+                    var eventType=e.type;
+                    if(eventType == 'mouseover'){
+                        $(this).find(".titleBox").css("transform","translate(0px,-"+docsHeight+")");
+                    }
+                    else{
+                        $(this).find(".titleBox").css("transform","translate(0px)");
+                    }
+                }
+                            );
+            }
+                                                   );
+        }
+    }
+    )(window, jQuery);</script>

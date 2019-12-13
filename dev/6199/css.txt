@@ -1,0 +1,406 @@
+<style>.QX-11226199 .tip{
+        max-width: 1180px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .QX-11226199 .zh_lc{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        color: #363636;
+        font-size: 36px;
+        font-weight: bold;
+        white-space: nowrap;
+        max-width: 1180px;
+        overflow: hidden;
+    }
+    .QX-11226199 .zh_yq .bt{
+        display: flex;
+        max-width: 1120px;
+        margin: 0 auto;
+        overflow: hidden;
+            justify-content: center;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab{
+        margin-left: 42px;
+        border-radius: 18px;
+        cursor: pointer;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab:focus{
+     outline:none;
+                        }
+   
+    .QX-11226199 .tip .prevArrow{
+        position: absolute;
+    left: 10px;
+    bottom: -67px;
+    display: none;
+    cursor: pointer;
+        font-size: 38px;
+    }
+    .QX-11226199 .tip .nextArrow{
+    position: absolute;
+    right: 10px;
+    bottom: -67px;
+   display: none;
+    cursor: pointer;
+        font-size: 38px;
+    }                
+    .QX-11226199 .zh_yq .bt .pagetab:hover .title{
+        color: #fff;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab:nth-child(1){
+        margin-left: 0;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab  .title{
+        padding:8px 40px;
+        white-space: nowrap;
+        font-size: 18px;
+        color: #434343;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab.active .title{
+        color: #fff;
+                        }
+    .QX-11226199 .zh_yq .bgc{
+        overflow: hidden;
+        width: 100%;
+        margin-top: 30px;
+        min-height: 240px;
+    }
+    .QX-11226199 .zh_yq .nr{
+        position: relative;
+        padding: 50px 30px 30px 30px;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+    .QX-11226199 .zh_yq .nr  .pagetab1{
+        max-width: 1180px;
+        margin: 0 auto;
+        border-bottom: 2px solid;
+        padding-bottom: 50px;
+    }
+    .QX-11226199 .zh_yq .nr  .pagetab1 .title1{
+    display:none
+                        }
+    .QX-11226199 .zh_yq .nr  .pagetab1 .cont{
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+        position: relative;
+        padding: 0 250px;
+    }
+    .QX-11226199 .zh_yq .nr  .pagetab .cont.active{
+        background-color:#fff;
+    }
+    .QX-11226199 .zh_yq .nr .pagetab1 .cont p:nth-child(1){
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .QX-11226199 .zh_yq .nr .pagetab1 .cont p:nth-child(2){
+        font-size: 16px;
+    }
+    .QX-11226199 .zh_yq .nr  .pagetab1 {
+        display:none;
+    }
+    .QX-11226199 .zh_yq .nr  .pagetab1.active{
+        display:block;
+    }
+    @keyframes fadeOutLeft {
+        from {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        to {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+    .fadeOutLeft {
+        -webkit-animation-name: fadeOutLeft;
+            animation-name: fadeOutLeft;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .QX-11226199 .fadeInRight {
+        -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+        }
+        .QX-11226199 .animated {
+        -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        .QX-11226199  .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+        .QX-11226199 .slick-slider
+    {
+        padding-bottom:unset;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .QX-11226199 .slick-list
+    {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 40px!important;
+    }
+    .QX-11226199 .slick-list:focus
+    {
+        outline: none;
+    }
+    .QX-11226199 .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+    .QX-11226199 .slick-slider .slick-track,
+    .QX-11226199 .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .QX-11226199 .slick-track
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .QX-11226199 .slick-track:before,
+    .QX-11226199 .slick-track:after
+    {
+        display: table;
+        content: '';
+    }
+    .QX-11226199 .slick-track:after
+    {
+        clear: both;
+    }
+    .QX-11226199 .slick-loading .slick-track
+    {
+        visibility: hidden;
+    }
+    .QX-11226199 .slick-slide
+    {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+        float: right;
+    }
+    .QX-11226199  .slick-slide img
+    {
+        display: block;
+    }
+    .QX-11226199 .slick-slide.slick-loading img
+    {
+        display: none;
+    }
+    .QX-11226199  .slick-slide.dragging img
+    {
+        pointer-events: none;
+    }
+    .QX-11226199  .slick-initialized .slick-slide
+    {
+        display: block;
+    }
+    .QX-11226199 .slick-loading .slick-slide
+    {
+        visibility: hidden;
+    }
+    .QX-11226199 .slick-vertical .slick-slide
+    {
+        display: block;
+        height: auto;
+        border: 0px solid transparent;
+    }
+    .QX-11226199 .slick-arrow.slick-hidden {
+        display: none;
+    }
+    .QX-11226199 .slick-dotted.slick-slider
+    {
+        margin-bottom: 30px;
+    }
+    .QX-11226199 .slick-dots
+    {
+        position: absolute;
+        bottom: -25px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .QX-11226199 .slick-dots li
+    {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    .QX-11226199 .slick-dots li button
+    {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    .QX-11226199 .slick-dots li button:hover,
+    .QX-11226199 .slick-dots li button:focus
+    {
+        outline: none;
+    }
+    .QX-11226199 .slick-dots li button:hover:before,
+    .QX-11226199 .slick-dots li button:focus:before
+    {
+        opacity: 1;
+    }
+    .QX-11226199 .slick-dots li button:before
+    {
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '?';
+        text-align: center;
+        opacity: .25;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .QX-11226199 .slick-active button:before
+    {
+        opacity: .75;
+        color: black;
+    }
+    .QX-11226199 .slick-next:after{
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-left: 1px solid #7f7051;
+        border-bottom: 1px solid #7f7051;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(-135deg);
+        margin-left: 26px;
+    }
+    .QX-11226199 .slick-slide:focus {
+        outline:none;
+    }
+    .QX-11226199  .slick-prev{
+        display: none!important;
+    }
+    .QX-11226199      .slick-next{
+        display: none!important;
+    }
+    @media screen and (max-width:1180px) {
+        .QX-11226199 .zh_yq .nr .pagetab1 .cont{
+                                padding: 0 100px;
+                            }
+                            .QX-11226199 .zh_yq .bt{
+                    max-width: calc(100% - 60px);
+
+                }
+            }
+            @media screen and (max-width:510px) {
+                .QX-11226199 .zh_lc{
+                            font-size: 30px;
+                        }
+                        .QX-11226199 .tip .prevArrow{
+                bottom: -62px;
+                left:5px;
+            }
+            .QX-11226199 .tip .nextArrow{
+        bottom: -62px;
+        right:5px;
+    }
+    .QX-11226199 .zh_yq .bt{
+        max-width: 322px;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab .title{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+    .QX-11226199 .zh_yq .bt .pagetab{
+        margin-left: 10px;
+        border-radius: 14px;
+    }
+    .QX-11226199 .zh_yq .bgc{
+        margin-top: 25px;
+    }
+    .QX-11226199 .zh_yq .nr{
+        padding: 20px 10px;
+    }
+    .QX-11226199 .zh_yq .nr .pagetab1{
+        padding-bottom: 30px;
+    }
+    .QX-11226199 .zh_yq .nr .pagetab1 .cont{
+        padding: 0;
+    }
+
+    .QX-11226199 .zh_yq .nr .pagetab1 .cont p:nth-child(1){
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .QX-11226199 .zh_yq .nr .pagetab1 .cont p:nth-child(2){
+        font-size: 14px;
+    }
+    .QX-11226199 .slick-list {
+        height: 29px ! important;
+            
+            }
+ 
+}</style>

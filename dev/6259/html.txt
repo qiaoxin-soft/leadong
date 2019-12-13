@@ -1,0 +1,77 @@
+<div class="QX-11226259">
+        <div class="wrap">
+            <div class="tile">
+                <div class="sitewidget-jumpNum">
+                    <div class="sitewidget-bd">
+                        <div class="jump-num-box">
+                            <div class="num-box num-box01" id="box" data-num="">
+                                
+                            </div>
+                              <div class="backstage-blocksEditor-wrap tarnum tarnum01" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=0b64700a-4509-4c94-8ce5-8524495286d5>4</div>
+                            <div class="unit-box">
+                                <div class="backstage-blocksEditor-wrap textTop" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=326fd036-bd63-4f3e-a2f5-61670f1c5035></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backstage-blocksEditor-wrap textBottom" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=d72d0eff-6dd1-48a9-8d41-4b0a8ab76630>Four Manufacturing Bases</div>
+            </div>
+            <div class="tile">
+                <div class="sitewidget-jumpNum">
+                    <div class="sitewidget-bd">
+                        <div class="jump-num-box">
+                            <div class="num-box num-box02" data-num="">
+                           
+                            </div>
+                            <div class="backstage-blocksEditor-wrap tarnum tarnum02" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=992755a8-1d97-4370-9d60-5a828d59cd99>8000</div>
+                            <div class="unit-box">
+                                <div class="backstage-blocksEditor-wrap textTop" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=ca5562f1-856c-43ff-8e7b-65a2300b6324>©O</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backstage-blocksEditor-wrap textBottom" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=e2007899-d4e6-4d72-8beb-130c0878a83d>Factory Area</div>
+            </div>
+            <div class="tile">
+                <div class="sitewidget-jumpNum">
+                    <div class="sitewidget-bd">
+                        <div class="jump-num-box">
+                            <div class="num-box num-box03" data-num="">
+                           
+                            </div>
+                            <div class="backstage-blocksEditor-wrap tarnum tarnum03" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=c0070aec-1907-4116-9d39-0711981878a3>300</div>
+                            <div class="unit-box">
+                                <div class="backstage-blocksEditor-wrap textTop" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=fb8db885-985d-40b2-87b7-c870cc971086>+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backstage-blocksEditor-wrap textBottom" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=957be27d-91e4-4904-9460-0a95da2fc503>Factory employee</div>
+            </div>
+            <div class="tile">
+                <div class="sitewidget-jumpNum">
+                    <div class="sitewidget-bd">
+                        <div class="jump-num-box">
+                            <div class="num-box num-box04" data-num="">
+                                
+                            </div>
+                            <div class="backstage-blocksEditor-wrap tarnum tarnum04" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=0ea007f4-cd57-44d8-b24c-c6e8cebecc88>100</div>
+                            <div class="unit-box">
+                                <div class="backstage-blocksEditor-wrap textTop" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=c0063d7f-305f-4522-8a01-3e83fb36f4ed>+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backstage-blocksEditor-wrap textBottom" data-wrap-type="1" data-storage="0" data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=7169dfd0-02c6-4d62-89fc-446f65cb36a9>Partner countries</div>
+            </div>
+            
+            
+            
+            
+        </div>
+    [@web_javascript collect="true"
+            pm_script="${settingId!}" jumpTo="${settingId!}" ] $(function(){
+            window._block_namespaces_['block6259'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'}); 
+    });
+            [/@web_javascript]
+    </div>

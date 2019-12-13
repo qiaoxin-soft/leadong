@@ -1,0 +1,37 @@
+<script>(function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {
+        }
+                                                              );
+        var name = "block6259";
+        var block6259 = _block_namespaces_[name] || (_block_namespaces_[name] = {
+        }
+                                                    );
+        $.extend(block6259, {
+            "init": init
+        }
+                )
+        function init(nodeObj) {
+            if (!!!nodeObj) {
+                return;
+            }
+            var $selector = $('div[data-settingid=' + nodeObj.settingId + ']');
+            $('.tarnum').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 3500,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+            
+            
+                
+        
+        
+        
+        }
+    }
+    )(window, jQuery);</script>

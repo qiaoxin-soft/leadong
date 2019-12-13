@@ -1,0 +1,81 @@
+[#assign color0 = '#939393']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[/#if]
+
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11296289 .Article_Container .w_wrapper .w_item .w_date { color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11296289 {background-color:${color1!}}
+[/@web_style]
+
+<div class="QX-11296289" >
+    
+    
+    <div class="Article_Container">
+        <div class="backstage-blocksEditor-wrap w_wrapper" data-wrap-type="1" data-relate-appId="PDpUKAfUKZcV" data-storage="1" data-blocksEditor-type="phoenix_blocks_article" data-auto_uuid=f9880925-1e6f-41c9-a7b3-8c8141e1b47b>[@table_select selectArticleCateType="${selectArticleCateType!'1'}" showType="${showType!'0'}" pageNum="${pageNum_articleList!'1'}" displayMode="${displayMode!'0'}" listScroll="0" selectCateIds="${articleCate_ids!''}" cateId="${infoGroupId!''}" paginationFlag="${paginationFlag!'0'}" pageSize="${pageSize!'20'}" serviceName="phoenixArticleService" showUnCate="${showUnCate!''}" searchArticleValue="${searchArticleValue!''}" keyword="${keyword!''}"]    [#if table_data??]        [#list table_data as article ]            
+            
+            
+            <div class="ArticlePicList_Item w_item">
+                
+                
+              
+                
+                <div class="w_image">
+                    <picture>
+                        <source media="(min-width: 450px)" srcset="[@pic_url src='${article.photoUrlNormal!}'][/@pic_url]" />
+                        <source media="(max-width: 449px)" srcset="[@pic_url src='${article.photoUrlNormal!}' width='300' height='300'][/@pic_url]" />
+                        <img class="image" class="headlines-content-img ArticlePicList_ItemImg" src="[@pic_url src='${article.photoUrlNormal!}' width='393' height='275'][/@pic_url]" alt="${article.photoAlt!?html}">
+                    </picture>
+                </div>
+                
+                <div class="w_date" [@web_backend]data-blocksetting-color="{'color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                    ${article.publishTime?string('MM')}-${article.publishTime?string('dd')}  
+                </div>
+                
+                <div class="ArticlePicList_ItemContent w_content">
+                    <div class="ArticlePicList_ItemContentInner w_inner">
+                        <div class="ArticlePicList_ItemContentInnerBox w_box">
+                            
+                            <h5 class="ArticlePicList_ItemContentInnerH5">
+                                [@phoenix_url urlType="info" commonId="${article.articleId}" prefixUrl="${article.articleTitle}" ]                                    
+                                <a href="${url}" title="${article.articleTitle!?html}">
+                                    ${article.articleTitle!?html}
+                                </a>
+                                [/@phoenix_url]                            
+                            </h5>
+                          <div class="w_line">
+                            </div>
+                            <p class="articleList-summary ArticlePicList_ItemContentInnerP">
+                                ${article.articleSummary!''}
+                            </p>
+                            [@phoenix_url urlType="info" commonId="${article.articleId}" prefixUrl="${article.articleTitle}" ]                                
+                            
+                            [/@phoenix_url]                            
+                            <div class="ArticlePicList_ItemContentInnerTrans w_trans">
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                    
+               
+             </div>
+            [/#list] 
+            [@web_javascript collect="true"
+            pm_script="${settingId!}" jumpTo="${settingId!}" ] $(function(){
+            window._block_namespaces_['qukuai6289'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'}); 
+    });
+            [/@web_javascript]
+            [#else]        [@web_backend]            [@phoenix_directive_i18n code="component_cont_txt_article_list_new" es="false" txt="
+            <p>
+                请进入“内容”》“文章管理”》“添加文章”，进行文章数据的添加，添加好的文章会自动展示出来。
+            </p>
+            "/]        [/@web_backend]    [/#if] [/@table_select]</div>
+    </div>
+
+
+</div>
+

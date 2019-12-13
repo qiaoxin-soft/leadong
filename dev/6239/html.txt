@@ -1,0 +1,85 @@
+[#assign color0 = '#71D14E']
+[#assign color1 = ' #FFFFFF']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .QX-11226239 .mask02{ background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .QX-11226239 .name{ color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .QX-11226239 .docsBox{ color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .QX-11226239 .button .buttonBox{ border-color:${color1!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!}  .QX-11226239 .button .buttonBox{ color:${color1!}}
+[/@web_style]
+<div class="${componentBlock.containerOpenState!''}" data-container-openstate="true">
+    <div id="location_${settingId!}">
+        <div class="QX-11226239">
+            <div class="backstage-blocksEditor-wrap navigation" data-wrap-type="1" data-relate-appId="YpfUKAUKDeHE" data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery" data-auto_uuid=983587ca-034b-4755-af59-69e1625fd778><div class="siteblocks-header-banner">
+                    <ul class="wrapper">
+                        [@gallery photos="${photo_ids!}" showAllFlag=true]				[#if gallery_data?? || (gallery_data?size)>0]					[#list gallery_data as photo]						
+                        <li class="tile">
+                            <div class="zzz" >
+                                <div class="imgBox">
+                                    [#if photo.linkJson?? && photo.linkJson!='']
+                                    <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                        [/#if]							                
+                                        <img class="imgTop"src="[@pic_url src='${photo.photoUrl!}' width='480' height='640'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                                        <img class="imgBottom"src="[@pic_url src='${photo.additionalPhotoUrl!}' width='480' height='640'][/@pic_url]" alt="${photo.trans_photoAlt!?html}" />
+                                        [#if photo.linkJson?? && photo.linkJson!='']
+                                    </a>
+                                    [/#if]	   
+                                    <div class="titleBox">
+                                        [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                                        <div class="banner-name nameBox" >
+                                            ${photo.trans_photoAlt!?html}
+                                        </div>
+                                        [/#if]	          
+                                    </div>
+                                    <div class="maskBox mask01">
+                                    </div>
+                                </div>
+                                <div class="textBox">
+                                    <div class="maskBox mask02"[@web_backend]data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}"[/@web_backend]>
+                                        <a class="mask03" [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                        </a>
+                                    </div>
+                                    <div class="banner-description text">
+                                        <div class="container textWra">
+                                            [#if photo.trans_photoAlt?? && photo.trans_photoAlt!='']
+                                            <div class="banner-name nameBox name"[@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                                                <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                                    ${photo.trans_photoAlt!?html}
+                                                </a>
+                                            </div>
+                                            [/#if]	                                [#if photo.trans_descJson?? && photo.trans_descJson!='']
+                                            <div class="banner-docs docsBox"[@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                                                <a [@phoenix_linkUrl linkJson="${photo.linkJson}" ][/@phoenix_linkUrl]>
+                                                    ${photo.trans_descJson!}
+                                                </a>
+                                            </div>
+                                            [/#if]	         
+                                        </div>
+                                        <div class="backstage-componet-bd button"[@web_backend]data-blocksetting-color="{'border-color':'colorVal-1-${color1!}'}"[/@web_backend] [@web_backend]data-blocksetting-color="{'color':'colorVal-1-${color1!}'}"[/@web_backend]>
+                                            <a class="blocks-button buttonBox" href="">
+                                                READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        [/#list]				[#elseif (gallery_data?size)==0]	            	no data.				[/#if]			[/@gallery]		
+                    </ul>
+                    [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"] 
+                    $(function(){
+                    window._block_namespaces_['qukuai6239'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+                    });
+                    [/@web_javascript]
+                </div></div>
+        </div>
+    </div>
+</div>

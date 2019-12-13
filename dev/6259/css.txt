@@ -1,0 +1,66 @@
+<style>.QX-11226259{
+      max-width:1180px;
+        margin:auto;
+    }
+    .QX-11226259 .wrap{
+      
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .QX-11226259 .tarnum {
+        font-size: 50px;
+    color: #333333;
+            }
+    .QX-11226259 .tile{
+            margin: 30px 0;
+        padding:0 30px;
+        width:calc(25% - 61px);
+        border-right:solid 1px  rgba(170, 170, 170, 0.2);
+    }
+    .QX-11226259 .sitewidget-bd {
+    line-height: unset;
+        }
+     .QX-11226259 .tile:nth-of-type(4n){
+                border-right:0px;
+                }
+    .QX-11226259 .jump-num-box{
+        display: flex;
+        justify-content: center;
+  
+    }
+    .QX-11226259 .num-box{
+        font-size: 50px;
+        color: #333333;
+    }
+    .QX-11226259 .textTop{
+        color: #b3b3b3;
+        font-size: 14px;
+    }
+   .QX-11226259 .textBottom{
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #333333;
+        font-size: 18px;
+        text-align: center;
+    }
+    @media screen and (max-width:700px){
+    .QX-11226259 .tile{
+                padding:0 15px;
+                    width:calc(50%  - 31px);
+                }
+                .QX-11226259 .tile:nth-of-type(2n){
+                            border-right:0px;
+                            }
+         .QX-11226259 .num-box{
+        font-size: 36px;
+    
+    }
+    .QX-11226259 .textTop{
+        color: #b3b3b3;
+        font-size: 12px;
+    }
+     .QX-11226259 .textBottom{
+        font-size: 12px;
+    }
+    }</style>
